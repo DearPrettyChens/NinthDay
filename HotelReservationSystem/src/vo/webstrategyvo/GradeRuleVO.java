@@ -1,24 +1,30 @@
 package vo.webstrategyvo;
 
-import java.util.Map;
 /**
  * 等级规则vo
  * @author CYF
  * @version 1.0
  */
 public class GradeRuleVO {
-	//等级规则
-	private Map<Integer,Integer> gradeAndValue;
-
-	public GradeRuleVO(Map<Integer,Integer> gradeAndValue){
-		this.setGradeAndValue(gradeAndValue);
+	//所有等级的数量
+	private int gradeNumber;
+	//上升一个等级所需的信用值
+	private int value;
+	public GradeRuleVO(int gradeNumber,int value){
+		this.setGradeNumber(gradeNumber);
+		this.setValue(value);
 	}
-	public Map<Integer, Integer> getGradeAndValue() {
-		return gradeAndValue;
+	public int getValue() {
+		return value;
 	}
-
-	public void setGradeAndValue(Map<Integer, Integer> gradeAndValue) {
-		this.gradeAndValue = gradeAndValue;
+	public void setValue(int value) {
+		this.value = value;
+	}
+	public int getGradeNumber() {
+		return gradeNumber;
+	}
+	public void setGradeNumber(int gradeNumber) {
+		this.gradeNumber = gradeNumber;
 	}
 	
 }
