@@ -2,6 +2,8 @@ package vo.hotelvo;
 
 import java.awt.Image;
 import java.util.List;
+
+import javax.swing.ImageIcon;
 /**
  * 酒店基本信息vo 给酒店工作人员看的
  * @author CYF
@@ -14,7 +16,7 @@ public class HotelBasicInfoVO {
 	// 酒店名
 	private String hotelName;
 	//酒店照片
-	private Image hotelImage;
+	private ImageIcon hotelImage;
 	// 地址
 	private String address;
 	// 商圈
@@ -36,7 +38,7 @@ public class HotelBasicInfoVO {
 	// 合作企业
 	private String[] enterprises;
 
-	public HotelBasicInfoVO(String hotelID, String hotelName,Image hotelImage, String address, String businessArea, String telephone,
+	public HotelBasicInfoVO(String hotelID, String hotelName,ImageIcon hotelImage, String address, String businessArea, String telephone,
 			int star, String introduce, String commonFacility, String activityFacility, String service,
 			String roomFacility, String[] enterprises) {
 		this.setHotelID(hotelID);
@@ -149,11 +151,11 @@ public class HotelBasicInfoVO {
 		this.enterprises = enterprises;
 	}
 
-	public Image getHotelImage() {
+	public ImageIcon getHotelImage() {
 		return hotelImage;
 	}
 
-	public void setHotelImage(Image hotelImage) {
+	public void setHotelImage(ImageIcon hotelImage) {
 		this.hotelImage = hotelImage;
 	}
 

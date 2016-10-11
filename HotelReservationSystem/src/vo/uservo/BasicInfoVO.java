@@ -1,6 +1,8 @@
 package vo.uservo;
 
 import java.awt.Image;
+
+import javax.swing.ImageIcon;
 /**
  * 用户基本信息
  * @author CYF
@@ -10,8 +12,8 @@ public class BasicInfoVO {
 	//用户名
 	private String userName;
 	//用户头像
-	private Image userImage;
-	public BasicInfoVO(String userName,Image userImage){
+	private ImageIcon userImage;
+	public BasicInfoVO(String userName,ImageIcon userImage){
 		this.setUserImage(userImage);
 		this.setUserName(userName);
 	}
@@ -21,10 +23,10 @@ public class BasicInfoVO {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public Image getUserImage() {
+	public ImageIcon getUserImage() {
 		return userImage;
 	}
-	public void setUserImage(Image userImage) {
+	public void setUserImage(ImageIcon userImage) {
 		this.userImage = userImage;
 	}
 

@@ -1,7 +1,9 @@
 package vo.uservo;
 
-import java.awt.Image;
+
 import java.util.Date;
+
+import javax.swing.ImageIcon;
 
 import common.UserType;
 
@@ -17,21 +19,27 @@ public class DetailInfoVO {
 	// 联系方式
 	private String telephone;
 	// 用户头像
-	private Image userImage;
+	private ImageIcon userImage;
 	// 用户种类
 	private UserType userType;
 	// 所属企业
 	private String enterprise;
 	// 生日
 	private Date birth;
-
-	public DetailInfoVO(String userName, String telephone, Image userImage, UserType userType, String enterprise,
-			Date birth) {
+	//企业会员的构造vo
+	public DetailInfoVO(String userName, String telephone, ImageIcon userImage, UserType userType, String enterprise) {
 		this.setUserName(userName);
 		this.setTelephone(telephone);
 		this.setUserImage(userImage);
 		this.setUserType(userType);
 		this.setEnterprise(enterprise);
+	}
+	//普通会员的构造vo
+	public DetailInfoVO(String userName, String telephone, ImageIcon userImage, UserType userType, Date birth) {
+		this.setUserName(userName);
+		this.setTelephone(telephone);
+		this.setUserImage(userImage);
+		this.setUserType(userType);
 		this.setBirth(birth);
 	}
 
@@ -51,11 +59,11 @@ public class DetailInfoVO {
 		this.telephone = telephone;
 	}
 
-	public Image getUserImage() {
+	public ImageIcon getUserImage() {
 		return userImage;
 	}
 
-	public void setUserImage(Image userImage) {
+	public void setUserImage(ImageIcon userImage) {
 		this.userImage = userImage;
 	}
 

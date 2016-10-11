@@ -4,6 +4,8 @@ import java.awt.Image;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.swing.ImageIcon;
+
 /**
  * 酒店基本信息
  * 
@@ -15,8 +17,8 @@ public class HotelBasicInfoPO implements Serializable {
 	private String hotelID;
 	// 酒店名
 	private String name;
-	//
-	//private Image hotelImage;
+	//酒店图片
+	private ImageIcon hotelImage;
 	// 地址
 	private String address;
 	// 联系方式
@@ -42,7 +44,7 @@ public class HotelBasicInfoPO implements Serializable {
 	// 住户点评
 	private List<RemarkPO> remarks;
 
-	public HotelBasicInfoPO(String hotelID, String name, String address, String telephone, int star, double score,
+	public HotelBasicInfoPO(String hotelID, String name, ImageIcon hotelImage,String address, String telephone, int star, double score,
 			double lowestPrice, String introduce, String commonFacility, String activityFacility, String service,
 			String roomFacility, List remarks) {
 		this.setHotelID(hotelID);
@@ -163,6 +165,14 @@ public class HotelBasicInfoPO implements Serializable {
 
 	public void setRoomFacility(String roomFacility) {
 		this.roomFacility = roomFacility;
+	}
+
+	public ImageIcon getHotelImage() {
+		return hotelImage;
+	}
+
+	public void setHotelImage(ImageIcon hotelImage) {
+		this.hotelImage = hotelImage;
 	}
 
 }

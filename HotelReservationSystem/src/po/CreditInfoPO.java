@@ -15,7 +15,7 @@ public class CreditInfoPO implements Serializable{
 	public CreditInfoPO(){
 		
 	}
-	//初始化
+	//信用记录不为空
 	public CreditInfoPO(List<CreditPO> creditRecords){
 		this.creditRecords = creditRecords;
 	}

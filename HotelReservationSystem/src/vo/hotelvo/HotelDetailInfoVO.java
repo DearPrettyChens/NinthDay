@@ -2,6 +2,8 @@ package vo.hotelvo;
 
 import java.awt.Image;
 
+import javax.swing.ImageIcon;
+
 import vo.availableroomvo.AvailableRoomInfoVO;
 import vo.hotelstrategyvo.HotelStrVO;
 import vo.ordervo.OrderVO;
@@ -16,7 +18,7 @@ public class HotelDetailInfoVO {
 	// 酒店地址
 	private String address;
 	//酒店图片
-	private Image hotelImage;
+	private ImageIcon hotelImage;
 	// 联系方式
 	private String telephone;
 	// 星级
@@ -40,7 +42,7 @@ public class HotelDetailInfoVO {
 	// 订单记录
 	private OrderVO[] orderRecordVO;
 
-	public HotelDetailInfoVO(String hotelName, String address, Image hotelImage,String telephone, int star, String introduce,
+	public HotelDetailInfoVO(String hotelName, String address, ImageIcon hotelImage,String telephone, int star, String introduce,
 			String commonFacility, String activityFacility, String service, String roomFacility, String[] enterprises,
 			HotelStrVO hotelStrVO, AvailableRoomInfoVO availableRoomInfoVO, OrderVO[] orderRecordVO) {
 		this.setHotelName(hotelName);
@@ -163,11 +165,11 @@ public class HotelDetailInfoVO {
 		this.orderRecordVO = orderRecordVO;
 	}
 
-	public Image getHotelImage() {
+	public ImageIcon getHotelImage() {
 		return hotelImage;
 	}
 
-	public void setHotelImage(Image hotelImage) {
+	public void setHotelImage(ImageIcon hotelImage) {
 		this.hotelImage = hotelImage;
 	}
 
