@@ -1,5 +1,5 @@
 package common;
 
 public enum UserType {
-	NormalVIP, ENTERPRISEVIP
+	NORMALVIP, ENTERPRISEVIP
 }
