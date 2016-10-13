@@ -20,14 +20,94 @@ import dataservice.webstrategydataservice.WebStrategyDataService;
  */
 
 public interface DataFactoryService {
+	
+	/**
+	 * 获取UserDataService接口实现对象
+	 * @param  无
+	 * @return UserDataService
+	 * @throws 无
+	 *
+	 */
 	public UserDataService getUserDataImpl();
+	
+	/**
+	 * 获取PersonnelDataService接口实现对象
+	 * @param  无
+	 * @return PersonnelDataService
+	 * @throws 无
+	 *
+	 */
 	public PersonnelDataService getPersonnelDataImpl();
+	
+	/**
+	 * 获取OrderDataService接口实现对象
+	 * @param  无
+	 * @return OrderDataService
+	 * @throws 无
+	 *
+	 */
 	public OrderDataService getOrderDataImpl();
+	
+	/**
+	 * 获取CreditDataService接口实现对象
+	 * @param  无
+	 * @return CreditDataService
+	 * @throws 无
+	 *
+	 */
 	public CreditDataService getCreditDataImpl();
+	
+	/**
+	 * 获取HotelDataService接口实现对象
+	 * @param  无
+	 * @return HotelDataService
+	 * @throws 无
+	 *
+	 */
 	public HotelDataService getHotelDataImpl();
+	
+	/**
+	 * 获取AvailableRoomDataService接口实现对象
+	 * @param  无
+	 * @return AvailableRoomDataService
+	 * @throws 无
+	 *
+	 */
 	public AvailableRoomDataService getAvailableroomDataImpl();
+	
+	/**
+	 * 获取CheckinDataService接口实现对象
+	 * @param  无
+	 * @return CheckinDataService
+	 * @throws 无
+	 *
+	 */
 	public CheckinDataService getCheckinDataImpl();
+	
+	/**
+	 * 获取WebStrategyDataService接口实现对象
+	 * @param  无
+	 * @return WebStrategyDataService
+	 * @throws 无
+	 *
+	 */
 	public WebStrategyDataService getWebStrategyDataImpl();
+	
+	/**
+	 * 获取HotelStrategyDataService接口实现对象
+	 * @param  无
+	 * @return HotelStrategyDataService
+	 * @throws 无
+	 *
+	 */
 	public HotelStrategyDataService getHotelStrategyDataImpl();
+	
+	/**
+	 * 获取SearchHotelDataService接口实现对象
+	 * @param  无
+	 * @return SearchHotelDataService
+	 * @throws 无
+	 *
+	 */
 	public SearchHotelDataService getSearchHotelDataImpl();
 }
