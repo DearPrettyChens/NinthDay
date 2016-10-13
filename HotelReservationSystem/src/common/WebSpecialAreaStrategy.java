@@ -8,12 +8,9 @@ import java.util.Map;
  *
  */
 public class WebSpecialAreaStrategy extends Strategy {
-<<<<<<< HEAD
+
 	private Map<TradingArea,Double> allDiscount;
 	private WebStrategyType type=WebStrategyType.SPECIALAREA;
-=======
-
->>>>>>> refs/heads/Lili
 	/**
 	 * 初始化该商圈的折扣值
 	 * @param specialArea
