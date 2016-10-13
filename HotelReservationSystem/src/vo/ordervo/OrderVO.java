@@ -5,7 +5,6 @@ package vo.ordervo;
  * @version1.0
  */
 public class OrderVO {
-<<<<<<< HEAD
 	// 订单状态
 	private String orderState;
 	// 顾客用户名
@@ -39,7 +38,6 @@ public class OrderVO {
 		return hotelName;
 	}
 
-=======
 	//订单状态
 	private String orderState;
 	//顾客用户名
@@ -77,7 +75,6 @@ public class OrderVO {
 		return hotelName;
 	}
 
->>>>>>> master
 	public void setHotelName(String hotelName) {
 		this.hotelName = hotelName;
 	}
