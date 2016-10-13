@@ -1,6 +1,10 @@
 package vo.personnelvo;
 
+import java.util.Date;
+
 import javax.swing.ImageIcon;
+
+import common.UserType;
 /**
  * 顾客详细信息的vo类，职责为实现逻辑层和界面层之间顾客详细信息的交互
  * @author CLL
@@ -18,13 +22,13 @@ public class CustomerDetailVO {
 	//信用值
 	private int credit;
 	//生日
-	private String birthday;
+	private Date birthday;
 	//企业名称
 	private String enterpriseName;
 	//会员等级
 	private int VIPgrade;
 	//会员类型（企业会员和普通会员两种）
-	private String VIPType;
+	private UserType VIPType;
 	//密码
 	private String password;
 	public CustomerDetailVO(){
@@ -41,7 +45,7 @@ public class CustomerDetailVO {
 	 * @param VIPgrade
 	 * @param password
 	 */
-	public CustomerDetailVO(String customerId,String customername,ImageIcon customerimage,String telephone,int credit,String birthday,int VIPgrade,String password){
+	public CustomerDetailVO(String customerId,String customername,ImageIcon customerimage,String telephone,int credit,Date birthday,int VIPgrade,String password){
 		this.customerName=customername;
 		this.customerImage=customerimage;
 		this.telephone=telephone;
@@ -105,11 +109,11 @@ public class CustomerDetailVO {
 		this.credit = credit;
 	}
 
-	public String getBirthday() {
+	public Date getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(String birthday) {
+	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
 
@@ -125,11 +129,11 @@ public class CustomerDetailVO {
 		return VIPgrade;
 	}
 	
-	public void setVIPType(String VIPType) {
+	public void setVIPType(UserType VIPType) {
 		this.VIPType = VIPType;
 	}
 
-	public String getVIPType() {
+	public UserType getVIPType() {
 		return VIPType;
 	}
 	
