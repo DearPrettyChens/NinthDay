@@ -9,6 +9,7 @@ import java.util.Map;
  */
 public class WebSpecialAreaStrategy extends Strategy {
 	private Map<String,Double> allDiscount;
+	private WebStrategyType type=WebStrategyType.SPECIALAREA;
 	/**
 	 * 初始化该商圈的折扣值
 	 * @param specialArea
@@ -40,5 +41,9 @@ public class WebSpecialAreaStrategy extends Strategy {
 	 */
 	public Map<String,Double> getAllDiscount(){
 		return allDiscount;
+	}
+	
+	public WebStrategyType getType() {
+		return type;
 	}
 }
