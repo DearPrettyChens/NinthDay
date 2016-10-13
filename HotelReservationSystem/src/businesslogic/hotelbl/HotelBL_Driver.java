@@ -12,7 +12,7 @@ import vo.hotelvo.HotelOrderVO;
  * 模拟酒店模块界面层和逻辑层交互的实现
  * @author csy
  * @version 1.0
- * 
+ *
  */
 public class HotelBL_Driver {
 	

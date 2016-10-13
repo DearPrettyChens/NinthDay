@@ -2,7 +2,6 @@ package businesslogic.hotelbl;
 
 import java.util.ArrayList;
 
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 
 import blservice.hotelblservice.HotelBLService;
 import common.ResultMessage;
@@ -10,7 +9,6 @@ import vo.hotelvo.HotelBasicInfoVO;
 import vo.hotelvo.HotelDetailInfoVO;
 import vo.hotelvo.HotelOrderInfoVO;
 import vo.hotelvo.HotelOrderVO;
-
 
 /**
  * 模拟酒店模块界面层和逻辑层交互的实现

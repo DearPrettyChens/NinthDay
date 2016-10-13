@@ -12,6 +12,7 @@ import vo.hotelstrategyvo.OrderProvidedVO;
  * @author csy
  * @version 1.0
  * 
+>>>>>>> master
  */
 public class HotelStrategyBL_Stub implements HotelStrategyBLService{
 

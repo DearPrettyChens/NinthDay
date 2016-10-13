@@ -11,6 +11,12 @@ import dataservice.searchhoteldataservice.SearchHotelDataService;
 import dataservice.userdataservice.UserDataService;
 import dataservice.webstrategydataservice.WebStrategyDataService;
 
+/**
+ * 数据工厂，负责提供各种数据接口的实现对象
+ * @author csy
+ * @version 1.0
+ * 
+ */
 public interface DataFactoryService {
 	public UserDataService getUserDataImpl();
 	public PersonnelDataService getPersonnelDataImpl();

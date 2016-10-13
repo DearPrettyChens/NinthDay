@@ -1,14 +1,15 @@
 package po;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 /**
  * 传递网站营销人员信息的po类
  * @author CLL
- *
+ * @version1.0
  */
-public class WebMarketManDetailPO {
+public class WebMarketManDetailPO implements Serializable{
 	//头像
 	private ImageIcon userImage;
 	//用户名（真实姓名）

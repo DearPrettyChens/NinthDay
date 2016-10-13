@@ -1,12 +1,15 @@
 package po;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.swing.ImageIcon;
+
+import common.UserType;
 /**
  * 传递顾客信息的po类，职责是实现数据层和逻辑层顾客信息的交互
  * @author CLL
- *
+ * @version1.0
  */
 public class CustomerDetailPO implements Serializable{
 	//顾客id
@@ -20,22 +23,20 @@ public class CustomerDetailPO implements Serializable{
 	//信用值
 	private int credit;
 	//生日
-	private String birthday;
+	private Date birthday;
 	//企业名称
 	private String enterpriseName;
 	//会员等级
 	private int VIPgrade;
 	//会员类型（企业会员和普通会员两种）
-	private String VIPType;
+	private UserType VIPType;
 	//密码
 	private String password;
-	
 	public CustomerDetailPO(){
 		
 	}
-	
 	/**
-	 * 普通会员po的构造函数
+	 * 普通会员vo的构造函数
 	 * @param customerId
 	 * @param customername
 	 * @param customerimage
@@ -45,7 +46,7 @@ public class CustomerDetailPO implements Serializable{
 	 * @param VIPgrade
 	 * @param password
 	 */
-	public CustomerDetailPO(String customerId,String customername,ImageIcon customerimage,String telephone,int credit,String birthday,int VIPgrade,String password){
+	public CustomerDetailPO(String customerId,String customername,ImageIcon customerimage,String telephone,int credit,Date birthday,int VIPgrade,String password){
 		this.customerName=customername;
 		this.customerImage=customerimage;
 		this.telephone=telephone;
@@ -56,7 +57,7 @@ public class CustomerDetailPO implements Serializable{
 		this.password=password;
 	}
 	/**
-	 * 企业会员po的构造函数
+	 * 企业会员vo的构造函数
 	 * @param customerId
 	 * @param customername
 	 * @param customerimage
@@ -76,7 +77,7 @@ public class CustomerDetailPO implements Serializable{
 		this.customerId=customerId;
 		this.password=password;
 	}
-	
+
 	public String getCustomerName() {
 		return customerName;
 	}
@@ -109,11 +110,11 @@ public class CustomerDetailPO implements Serializable{
 		this.credit = credit;
 	}
 
-	public String getBirthday() {
+	public Date getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(String birthday) {
+	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
 
@@ -129,11 +130,11 @@ public class CustomerDetailPO implements Serializable{
 		return VIPgrade;
 	}
 	
-	public void setVIPType(String VIPType) {
+	public void setVIPType(UserType VIPType) {
 		this.VIPType = VIPType;
 	}
 
-	public String getVIPType() {
+	public UserType getVIPType() {
 		return VIPType;
 	}
 	
