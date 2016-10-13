@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * 网站会员特惠策略
  * @author CLL
- *
+ * @version 1.0
  */
 public class WebVIPStrategy extends Strategy {
 	private Map<Integer,Double> allDiscount;

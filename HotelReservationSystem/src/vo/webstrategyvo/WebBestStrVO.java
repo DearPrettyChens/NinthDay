@@ -9,22 +9,16 @@ import common.WebStrategyType;
  * @version 1.0
  */
 public class WebBestStrVO {
-	//最优策略
-	private Strategy bestStr;
-	//网站营销策略类型 感觉写到Strategy里面会不会好一点？
+	//最优策略类型
 	private WebStrategyType webStrategyType;
+	//折扣值
+	private double discount;
 	
 	public WebBestStrVO(){
 	}
-	public WebBestStrVO(Strategy bestStr){
-		this.setBestStr(bestStr);
+	public WebBestStrVO(WebStrategyType webStrategyType,double discount){
 		this.setWebStrategyType(webStrategyType);
-	}
-	public Strategy getBestStr() {
-		return bestStr;
-	}
-	public void setBestStr(Strategy bestStr) {
-		this.bestStr = bestStr;
+		this.setDiscount(discount);
 	}
 	public WebStrategyType getWebStrategyType() {
 		return webStrategyType;
@@ -32,4 +26,11 @@ public class WebBestStrVO {
 	public void setWebStrategyType(WebStrategyType webStrategyType) {
 		this.webStrategyType = webStrategyType;
 	}
+	public double getDiscount() {
+		return discount;
+	}
+	public void setDiscount(double discount) {
+		this.discount = discount;
+	}
+	
 }

@@ -8,7 +8,6 @@ import java.util.Map;
  *
  */
 public class WebSpecialAreaStrategy extends Strategy {
-
 	private Map<TradingArea,Double> allDiscount;
 	private WebStrategyType type=WebStrategyType.SPECIALAREA;
 	/**
@@ -24,7 +23,7 @@ public class WebSpecialAreaStrategy extends Strategy {
 	 * @param specialArea
 	 * @return double
 	 */
-	public double getDiscount(TradingArea specialArea) {
+	public double getDiscount(String specialArea) {
 		return allDiscount.get(specialArea);
 	}
 	/**

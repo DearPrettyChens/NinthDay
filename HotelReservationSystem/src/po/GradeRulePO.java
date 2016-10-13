@@ -3,11 +3,7 @@ import java.io.Serializable;
 /**
  * 传递会员等级策略的po
  * @author CLL
-<<<<<<< HEAD
- * @version 1.0
-=======
-
->>>>>>> refs/heads/Lili
+ * 
  */
 public class GradeRulePO implements Serializable {
 	//每升一级所需的信用值
@@ -25,5 +21,4 @@ public class GradeRulePO implements Serializable {
 		this.credit = credit;
 	}
 }
-
 
