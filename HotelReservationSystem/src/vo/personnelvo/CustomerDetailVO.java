@@ -1,7 +1,7 @@
 package vo.personnelvo;
 
-import java.util.Date;
 
+import java.util.Date;
 import javax.swing.ImageIcon;
 
 import common.UserType;
@@ -134,6 +134,7 @@ public class CustomerDetailVO {
 	}
 
 	public UserType getVIPType() {
+
 		return VIPType;
 	}
 	

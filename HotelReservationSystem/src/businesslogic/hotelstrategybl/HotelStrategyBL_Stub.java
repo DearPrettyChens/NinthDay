@@ -12,7 +12,10 @@ import vo.hotelstrategyvo.OrderProvidedVO;
  * @author csy
  * @version 1.0
  * 
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> refs/remotes/origin/cyfBranch
  */
 public class HotelStrategyBL_Stub implements HotelStrategyBLService{
 

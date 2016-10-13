@@ -47,4 +47,5 @@ public class WebSpecialTimeStrategy extends Strategy{
 		return type;
 	}
 
+
 }

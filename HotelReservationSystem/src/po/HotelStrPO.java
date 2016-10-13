@@ -7,7 +7,11 @@ import common.Strategy;
 /**
  * 传递所有的酒店营销策略
  * @author CLL
+<<<<<<< HEAD
  * @version1.0
+=======
+ *
+>>>>>>> refs/remotes/origin/cyfBranch
  */
 public class HotelStrPO implements Serializable{
 	private ArrayList<Strategy> strategies;

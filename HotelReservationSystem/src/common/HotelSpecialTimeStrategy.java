@@ -12,6 +12,7 @@ public class HotelSpecialTimeStrategy extends Strategy {
 	private String hotelId;
 	//前者为特定日期，后者为当天对应的折扣值
 	private Map<Date,Double> discountPolicy;
+
 	private HotelStrategyType type=HotelStrategyType.SPECIALTIME;
 	
 	public HotelSpecialTimeStrategy(String hotelId,Map<Date,Double> discountPolicy){

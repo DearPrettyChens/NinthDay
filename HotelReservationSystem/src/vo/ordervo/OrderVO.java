@@ -5,6 +5,7 @@ package vo.ordervo;
  * @version1.0
  */
 public class OrderVO {
+
 	//订单状态
 	private String orderState;
 	//顾客用户名
@@ -21,6 +22,8 @@ public class OrderVO {
 		this.customerName=customerName;
 		this.hotelName=hotelName;
 	}
+
+
 
 	public String getOrderState() {
 		return orderState;

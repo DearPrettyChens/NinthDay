@@ -1,11 +1,14 @@
 package vo.ordervo;
 
 import java.util.ArrayList;
+
 import java.util.Date;
+
 
 import common.Children;
 import common.OrderState;
 import common.Strategy;
+
 import common.BedType;
 /**
  * 订单详细信息的vo类

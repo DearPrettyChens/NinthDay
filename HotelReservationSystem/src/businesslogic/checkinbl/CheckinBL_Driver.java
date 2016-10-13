@@ -1,6 +1,7 @@
 package businesslogic.checkinbl;
 
 import blservice.checkinblservice.CheckinBLService;
+
 import common.BedType;
 import vo.checkinvo.AvailableRoomInfoVO;
 import vo.checkinvo.AvailableRoomNumberVO;

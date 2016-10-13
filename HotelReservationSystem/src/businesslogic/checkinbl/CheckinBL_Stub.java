@@ -1,6 +1,7 @@
 package businesslogic.checkinbl;
 
 import blservice.checkinblservice.CheckinBLService;
+
 import common.BedType;
 import common.ResultMessage;
 import vo.checkinvo.AvailableRoomInfoVO;
@@ -46,6 +47,7 @@ public class CheckinBL_Stub implements CheckinBLService{
 
 	@Override
 	public ResultMessage checkAvailableRoomNumber(BedType bedType, String number) {
+
 		// TODO Auto-generated method stub
 		return ResultMessage.SUCCESS;
 	}

@@ -1,6 +1,7 @@
 package businesslogic.availableroombl;
 
 import blservice.availableroomblservice.AvailableRoomBLService;
+
 import common.BedType;
 import common.ResultMessage;
 import vo.availableroomvo.AvailableRoomInfoVO;

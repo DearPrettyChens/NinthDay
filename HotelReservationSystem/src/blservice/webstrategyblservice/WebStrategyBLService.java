@@ -19,7 +19,11 @@ import vo.webstrategyvo.WebStrVO;
 public interface WebStrategyBLService {
 	/**
 	 * 获取最佳网站策略
+<<<<<<< HEAD
 	 * @param credit String型,area TradingArea型,time Date型，传递策略所需的信用值商圈和时间
+=======
+	 * @param credit String型,area TradingArea型,time String型，传递策略所需的信用值商圈和时间
+>>>>>>> refs/remotes/origin/cyfBranch
 	 * @return WebBestStrVO ，将最佳网站策略返回给界面或order模块
 	 * @throws 未定
 	 *

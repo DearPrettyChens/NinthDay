@@ -34,4 +34,5 @@ public class HotelBirthStrategy extends Strategy{
 		return type;
 	}
 
+
 }
