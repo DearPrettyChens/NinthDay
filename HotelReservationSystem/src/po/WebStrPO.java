@@ -7,7 +7,11 @@ import common.Strategy;
 /**
  * 传递所有的网站营销策略
  * @author CLL
+<<<<<<< HEAD
+ * @version 1.0
+=======
  *
+>>>>>>> refs/remotes/origin/cyfBranch
  */
 public class WebStrPO implements Serializable{
 	private ArrayList<Strategy> strategies;

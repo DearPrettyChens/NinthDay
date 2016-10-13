@@ -11,6 +11,7 @@ public class HotelEnterpriseStrategy extends Strategy {
 	private String hotelId;
 	//前者为企业名称,后者为该企业对应的折扣值
 	private Map<String,Double> discountPolicy;
+	private HotelStrategyType type=HotelStrategyType.ENTERPRISE;
 	
 	public HotelEnterpriseStrategy(String hotelId,Map<String,Double> discountPolicy){
 		this.hotelId=hotelId;
@@ -33,5 +34,8 @@ public class HotelEnterpriseStrategy extends Strategy {
 		this.discountPolicy = discountPolicy;
 	}
 
+	public HotelStrategyType getType() {
+		return type;
+	}
 
 }

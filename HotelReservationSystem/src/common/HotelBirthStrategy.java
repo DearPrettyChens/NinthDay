@@ -7,6 +7,7 @@ package common;
 public class HotelBirthStrategy extends Strategy{
 	private double discount;
 	private String hotelId;
+	private HotelStrategyType type=HotelStrategyType.BIRTH;
 	
 	public HotelBirthStrategy(String hotelId,double discount){
 		this.hotelId=hotelId;
@@ -28,4 +29,10 @@ public class HotelBirthStrategy extends Strategy{
 	public void setHotelId(String hotelId) {
 		this.hotelId = hotelId;
 	}
+
+	public HotelStrategyType getType() {
+		return type;
+	}
+
+
 }

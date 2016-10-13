@@ -2,90 +2,179 @@ package vo.ordervo;
 
 import java.util.ArrayList;
 
+import java.util.Date;
+
 import common.Children;
 import common.OrderState;
+
 import common.Strategy;
+
+import common.BedType;
+
 /**
  * 订单详细信息的vo类
+ * 
  * @author CLL
  * @version 1.0
  */
 public class OrderInfoVO {
-	//订单编号
-	private String orderId;
-	//顾客用户名
+	// 顾客编号
+	private String customerID;
+	// 订单编号
+	private String orderID;
+	// 顾客生成订单时填写的顾客姓名
 	private String customerName;
-	//订单价格（保留整数）
-	private double price;
-	//订单所用优惠
-	private ArrayList<Strategy> strategies;
-	//入住人姓名
-	private String lodgerName;
-	//入住人联系方式11位
-	private String lodgerTel;
-	//预计入住时间（年月日）
-	private String expectCheckInTime;
-	//预计退房时间（年月日）
-	private String expectCheckOutTime;
-	//实际入住时间（年月日）
-	private String actualCheckInTime;
-	//实际退房时间（年月日）
-	private String actualCheckOutTime;
-	//订单状态
-	private OrderState orderState;
-	//酒店名称
+	// 顾客生成订单时填写的顾客联系方式
+	private String customerTelephone;
+	// 酒店名称
 	private String hotelName;
-	//酒店联系方式（4位区号＋8位数字）
-	private String hotelTel;
-	//房间类型
+	// 酒店ID
+	private String hotelID;
+	// 酒店联系方式
+	private String hotelTelephone;
+	// 预定房型
 	private String roomType;
-	//房间数量
-	private int roomNum;
-	//入住人数
-	private int lodgerNum;
-	//有无儿童
-	private Children children;
-	//生成订单时间（年月日时分）
-	private String orderTime;
-	//最晚入住时间（年月日时分）
-	private String latestCheckInTime;
-	
-	public OrderInfoVO(){
-		
+	// 预定床型
+	private BedType bedType;
+	// 预定房间数量
+	private int amount;
+	// 预定时间
+	private Date orderTime;
+	// 入住人数
+	private int NumberOfPeople;
+	// 有无儿童
+	private Children hasChild;
+	// 是否评价
+	// 枚举？----------------------------------//
+	private boolean hasRemarked;
+	// 预计入住时间
+	private Date expectedCheckInTime;
+	// 预计退房时间
+	private Date expectedCheckOutTime;
+	// ＊＊＊＊＊＊＊＊＊＊＊＊＊疑问:最晚入住时间在什么时候生成？下订单时会产生吗？//
+	// 最晚入住时间
+	private Date lateCheckInTime;
+	// 实际入住时间
+	private Date actualCheckInTime;
+	// 实际退房时间
+	private Date actuarCheckOutTime;
+	// 订单价格
+	private double price;
+	// 订单状态
+	private OrderState state;
+
+	// 空方法
+	public OrderInfoVO() {
+
 	}
-	
-	public OrderInfoVO(String orderId,String customerName,double price,ArrayList<Strategy> strategies,
-			String lodgerName,String lodgerTel,String expectCheckInTime,String expectCheckOutTime,
-			String roomType,int roomNum,int lodgerNum,Children children,String actualCheckInTime,
-			String actualCheckOutTime,String orderTime,OrderState orderState,String hotelName,
-			String hotelTel,String latestCheckInTime){
-		this.orderId=orderId;
-		this.customerName=customerName;
-		this.price=price;
-		this.strategies=strategies;
-		this.lodgerName=lodgerName;
-		this.lodgerTel=lodgerName;
-		this.expectCheckInTime=expectCheckInTime;
-		this.expectCheckOutTime=expectCheckOutTime;
+
+	// 查看所有订单信息
+	public OrderInfoVO(String customerID, String orderID, String customerName, String customerTelephone,
+			String hotelName, String hotelID, String hotelTelephone, String roomType, BedType bedType, int amount,
+			Date orderTime, int numberOfPeople, Children hasChild, boolean hasRemarked, Date expectedCheckInTime,
+			Date expectedCheckOutTime, Date lateCheckInTime, Date actualCheckInTime, Date actualCheckOutTime,
+			double price, OrderState state) {
+		this.setCustomerID(customerID);
+		this.setOrderID(orderID);
+		this.setCustomerName(customerName);
+		this.setCustomerTelephone(customerTelephone);
+		this.setHotelName(hotelName);
+		this.setHotelID(hotelID);
+		this.setHotelTelephone(hotelTelephone);
 		this.setRoomType(roomType);
-		this.setRoomNum(roomNum);
-		this.setLodgerNum(lodgerNum);
-		this.setChildren(children);
-		this.actualCheckInTime=actualCheckInTime;
-		this.actualCheckOutTime=actualCheckOutTime;
-		this.orderTime=orderTime;
-		this.orderState=orderState;
-		this.hotelName=hotelName;
-		this.hotelTel=hotelTel;
-		this.latestCheckInTime=latestCheckInTime;
+		this.setBedType(bedType);
+		this.setAmount(amount);
+		this.setOrderTime(orderTime);
+		this.setNumberOfPeople(numberOfPeople);
+		this.setHasChild(hasChild);
+		this.setHasRemarked(hasRemarked);
+		this.setExpectedCheckInTime(expectedCheckInTime);
+		this.setExpectedCheckOutTime(expectedCheckOutTime);
+		this.setLateCheckInTime(lateCheckInTime);
+		this.setActualCheckInTime(actualCheckInTime);
+		this.setActuarCheckOutTime(actualCheckOutTime);
+		this.setPrice(price);
+		this.setState(state);
 	}
 
-	public String getOrderId() {
-		return orderId;
+	// 顾客下订单时的订单信息
+	public OrderInfoVO(String orderID, String hotelID, String customerID, String customerName, String customerTelephone,
+			Date expectedCheckInTime, Date expectedCheckOutTime, String roomType, BedType bedType, int amount,
+			int numberOfPeople, Children hasChild, double price, OrderState state) {
+		this.setOrderID(orderID);
+		this.setCustomerID(customerID);
+		this.setHotelID(hotelID);
+		this.setCustomerName(customerName);
+		this.setCustomerTelephone(customerTelephone);
+		this.setExpectedCheckInTime(expectedCheckInTime);
+		this.setExpectedCheckOutTime(expectedCheckOutTime);
+		this.setRoomType(roomType);
+		this.setBedType(bedType);
+		this.setAmount(amount);
+		this.setNumberOfPeople(numberOfPeople);
+		this.setHasChild(hasChild);
+		this.setPrice(price);
+		this.setState(state);
 	}
 
-	public void setOrderId(String orderId) {
-		this.orderId = orderId;
+	// 顾客在撤销订单前及入住之前查看订单时显示的订单信息
+	// 酒店管理人员checkin时获取的订单信息
+	// 网站营销人员撤销异常订单时获取的订单信息
+	public OrderInfoVO(String orderID, String hotelID, String customerID, String customerName, String customerTelephone,
+			Date expectedCheckInTime, Date expectedCheckOutTime, Date lateCheckInTime, String roomType, BedType bedType,
+			int amount, int numberOfPeople, Children hasChild, double price, OrderState state) {
+		this.setOrderID(orderID);
+		this.setCustomerID(customerID);
+		this.setHotelID(hotelID);
+		this.setCustomerName(customerName);
+		this.setCustomerTelephone(customerTelephone);
+		this.setExpectedCheckInTime(expectedCheckInTime);
+		this.setExpectedCheckOutTime(expectedCheckOutTime);
+		this.setLateCheckInTime(lateCheckInTime);
+		this.setRoomType(roomType);
+		this.setBedType(bedType);
+		this.setAmount(amount);
+		this.setNumberOfPeople(numberOfPeople);
+		this.setHasChild(hasChild);
+		this.setPrice(price);
+		this.setState(state);
+	}
+
+	// 酒店管理人员checkout时获取的订单信息
+	public OrderInfoVO(String orderID, String hotelID, String customerID, String customerName, String customerTelephone,
+			Date expectedCheckInTime, Date expectedCheckOutTime, Date lateCheckInTime, String roomType, BedType bedType,
+			int amount, int numberOfPeople, Children hasChild, OrderState state, Date actualCheckInTime) {
+		this.setOrderID(orderID);
+		this.setCustomerID(customerID);
+		this.setHotelID(hotelID);
+		this.setCustomerName(customerName);
+		this.setCustomerTelephone(customerTelephone);
+		this.setExpectedCheckInTime(expectedCheckInTime);
+		this.setExpectedCheckOutTime(expectedCheckOutTime);
+		this.setLateCheckInTime(lateCheckInTime);
+		this.setRoomType(roomType);
+		this.setBedType(bedType);
+		this.setAmount(amount);
+		this.setNumberOfPeople(numberOfPeople);
+		this.setHasChild(hasChild);
+		this.setState(state);
+		this.setActualCheckInTime(actualCheckInTime);
+	}
+
+	public String getCustomerID() {
+		return customerID;
+	}
+
+	public void setCustomerID(String customerID) {
+		this.customerID = customerID;
+	}
+
+	public String getOrderID() {
+		return orderID;
+	}
+
+	public void setOrderID(String orderID) {
+		this.orderID = orderID;
 	}
 
 	public String getCustomerName() {
@@ -96,76 +185,12 @@ public class OrderInfoVO {
 		this.customerName = customerName;
 	}
 
-	public double getPrice() {
-		return price;
+	public String getCustomerTelephone() {
+		return customerTelephone;
 	}
 
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public ArrayList<Strategy> getStrategies() {
-		return strategies;
-	}
-
-	public void setStrategies(ArrayList<Strategy> strategies) {
-		this.strategies = strategies;
-	}
-
-	public String getLodgerName() {
-		return lodgerName;
-	}
-
-	public void setLodgerName(String lodgerName) {
-		this.lodgerName = lodgerName;
-	}
-
-	public String getLodgerTel() {
-		return lodgerTel;
-	}
-
-	public void setLodgerTel(String lodgerTel) {
-		this.lodgerTel = lodgerTel;
-	}
-
-	public String getExpectCheckInTime() {
-		return expectCheckInTime;
-	}
-
-	public void setExpectCheckInTime(String expectCheckInTime) {
-		this.expectCheckInTime = expectCheckInTime;
-	}
-
-	public String getExpectCheckOutTime() {
-		return expectCheckOutTime;
-	}
-
-	public void setExpectCheckOutTime(String expectCheckOutTime) {
-		this.expectCheckOutTime = expectCheckOutTime;
-	}
-
-	public String getActualCheckInTime() {
-		return actualCheckInTime;
-	}
-
-	public void setActualCheckInTime(String actualCheckInTime) {
-		this.actualCheckInTime = actualCheckInTime;
-	}
-
-	public String getActualCheckOutTime() {
-		return actualCheckOutTime;
-	}
-
-	public void setActualCheckOutTime(String actualCheckOutTime) {
-		this.actualCheckOutTime = actualCheckOutTime;
-	}
-
-	public OrderState getOrderState() {
-		return orderState;
-	}
-
-	public void setOrderState(OrderState orderState) {
-		this.orderState = orderState;
+	public void setCustomerTelephone(String customerTelephone) {
+		this.customerTelephone = customerTelephone;
 	}
 
 	public String getHotelName() {
@@ -176,28 +201,20 @@ public class OrderInfoVO {
 		this.hotelName = hotelName;
 	}
 
-	public String getHotelTel() {
-		return hotelTel;
+	public String getHotelID() {
+		return hotelID;
 	}
 
-	public void setHotelTel(String hotelTel) {
-		this.hotelTel = hotelTel;
+	public void setHotelID(String hotelID) {
+		this.hotelID = hotelID;
 	}
 
-	public String getOrderTime() {
-		return orderTime;
+	public String getHotelTelephone() {
+		return hotelTelephone;
 	}
 
-	public void setOrderTime(String orderTime) {
-		this.orderTime = orderTime;
-	}
-
-	public String getLatestCheckInTime() {
-		return latestCheckInTime;
-	}
-
-	public void setLatestCheckInTime(String latestCheckInTime) {
-		this.latestCheckInTime = latestCheckInTime;
+	public void setHotelTelephone(String hotelTelephone) {
+		this.hotelTelephone = hotelTelephone;
 	}
 
 	public String getRoomType() {
@@ -208,29 +225,108 @@ public class OrderInfoVO {
 		this.roomType = roomType;
 	}
 
-	public int getRoomNum() {
-		return roomNum;
+	public BedType getBedType() {
+		return bedType;
 	}
 
-	public void setRoomNum(int roomNum) {
-		this.roomNum = roomNum;
+	public void setBedType(BedType bedType) {
+		this.bedType = bedType;
 	}
 
-	public int getLodgerNum() {
-		return lodgerNum;
+	public int getAmount() {
+		return amount;
 	}
 
-	public void setLodgerNum(int lodgerNum) {
-		this.lodgerNum = lodgerNum;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 
-	public Children getChildren() {
-		return children;
+	public Date getOrderTime() {
+		return orderTime;
 	}
 
-	public void setChildren(Children children) {
-		this.children = children;
+	public void setOrderTime(Date orderTime) {
+		this.orderTime = orderTime;
 	}
 
-	
+	public int getNumberOfPeople() {
+		return NumberOfPeople;
+	}
+
+	public void setNumberOfPeople(int numberOfPeople) {
+		NumberOfPeople = numberOfPeople;
+	}
+
+	public Children isHasChild() {
+		return hasChild;
+	}
+
+	public void setHasChild(Children hasChild) {
+		this.hasChild = hasChild;
+	}
+
+	public boolean isHasRemarked() {
+		return hasRemarked;
+	}
+
+	public void setHasRemarked(boolean hasRemarked) {
+		this.hasRemarked = hasRemarked;
+	}
+
+	public Date getExpectedCheckInTime() {
+		return expectedCheckInTime;
+	}
+
+	public void setExpectedCheckInTime(Date expectedCheckInTime) {
+		this.expectedCheckInTime = expectedCheckInTime;
+	}
+
+	public Date getExpectedCheckOutTime() {
+		return expectedCheckOutTime;
+	}
+
+	public void setExpectedCheckOutTime(Date expectedCheckOutTime) {
+		this.expectedCheckOutTime = expectedCheckOutTime;
+	}
+
+	public Date getLateCheckInTime() {
+		return lateCheckInTime;
+	}
+
+	public void setLateCheckInTime(Date lateCheckInTime) {
+		this.lateCheckInTime = lateCheckInTime;
+	}
+
+	public Date getActualCheckInTime() {
+		return actualCheckInTime;
+	}
+
+	public void setActualCheckInTime(Date actualCheckInTime) {
+		this.actualCheckInTime = actualCheckInTime;
+	}
+
+	public Date getActuarCheckOutTime() {
+		return actuarCheckOutTime;
+	}
+
+	public void setActuarCheckOutTime(Date actualCheckOutTime) {
+		this.actuarCheckOutTime = actuarCheckOutTime;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public OrderState getState() {
+		return state;
+	}
+
+	public void setState(OrderState state) {
+		this.state = state;
+	}
+
 }

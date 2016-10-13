@@ -9,6 +9,7 @@ import java.util.Map;
  */
 public class WebSpecialTimeStrategy extends Strategy{
 	private Map<Date,Double> allDiscount;
+	private WebStrategyType type=WebStrategyType.SPECIALTIME;
 	/**
 	 * 初始化该特定日期的折扣值
 	 * @param specialTime
@@ -20,7 +21,7 @@ public class WebSpecialTimeStrategy extends Strategy{
 	/**
 	 * 获取该日期的折扣值
 	 * @param specialTime
-	 * @return
+	 * @return double
 	 */
 	public double getDiscount(Date specialTime) {
 		return allDiscount.get(specialTime);
@@ -36,10 +37,15 @@ public class WebSpecialTimeStrategy extends Strategy{
 	}
 	/**
 	 * 返回所有特定日期及其折扣值
-	 * @return
+	 * @return Map<Date,Double>
 	 */
 	public Map<Date,Double> getAllDiscount(){
 		return allDiscount;
 	}
 	
+	public WebStrategyType getType() {
+		return type;
+	}
+
+
 }

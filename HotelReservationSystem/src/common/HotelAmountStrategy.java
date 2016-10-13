@@ -8,6 +8,7 @@ public class HotelAmountStrategy extends Strategy {
 	private double discount;
 	private String hotelId;
 	private String preferNum;
+	private HotelStrategyType type=HotelStrategyType.AMOUNT;
 	
 	public HotelAmountStrategy(String hotelId,String preferNum,double discount){
 		this.hotelId=hotelId;
@@ -38,4 +39,9 @@ public class HotelAmountStrategy extends Strategy {
 	public void setPreferNum(String preferNum) {
 		this.preferNum = preferNum;
 	}
+
+	public HotelStrategyType getType() {
+		return type;
+	}
+
 }

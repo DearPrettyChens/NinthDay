@@ -4,6 +4,12 @@ import java.io.Serializable;
 
 import javax.swing.ImageIcon;
 
+/**
+ * 传递酒店工作人员信息的po类，职责是实现数据层和逻辑层顾客信息的交互
+ * @author CLL
+ * @version1.0
+ */
+
 public class HotelWorkerDetailPO implements Serializable{
 	//头像
 	private ImageIcon hotelWorkerImage;

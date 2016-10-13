@@ -7,7 +7,10 @@ import vo.hotelstrategyvo.HotelStrVO;
 import vo.hotelstrategyvo.OrderProvidedVO;
 
 /**
+<<<<<<< HEAD
+=======
  * 模拟酒店策略模块界面层和逻辑层交互的实现
+>>>>>>> refs/remotes/origin/cyfBranch
  * @author csy
  * @version 1.0
  * 

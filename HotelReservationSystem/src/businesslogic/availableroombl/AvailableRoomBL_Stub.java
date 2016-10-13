@@ -1,6 +1,8 @@
 package businesslogic.availableroombl;
 
 import blservice.availableroomblservice.AvailableRoomBLService;
+
+import common.BedType;
 import common.ResultMessage;
 import vo.availableroomvo.AvailableRoomInfoVO;
 import vo.availableroomvo.AvailableRoomNumberVO;
@@ -36,7 +38,7 @@ public class AvailableRoomBL_Stub implements AvailableRoomBLService{
 	}
 
 	@Override
-	public double getRoomPrice(String hotelID, String roomType) {
+	public double getRoomPrice(String hotelID, BedType bedType) {
 		// TODO Auto-generated method stub
 		return 100;
 	}
