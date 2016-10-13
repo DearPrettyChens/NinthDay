@@ -43,6 +43,13 @@ public class WebSpecialAreaStrategy extends Strategy {
 		return allDiscount;
 	}
 	
+	/**
+	 * 返回网站策略类型
+	 * @param  无
+	 * @return  WebStrategyType
+	 * @throws  无
+	 * 
+	 */
 	public WebStrategyType getType() {
 		return type;
 	}
