@@ -16,7 +16,7 @@ public class WebBestStrVO {
 	
 	public WebBestStrVO(){
 	}
-	public WebBestStrVO(Strategy bestStr,WebStrategyType webStrategyType){
+	public WebBestStrVO(Strategy bestStr){
 		this.setBestStr(bestStr);
 		this.setWebStrategyType(webStrategyType);
 	}
