@@ -8,7 +8,10 @@ import common.Strategy;
  * @version 1.0
  */
 public class WebBestStrVO {
+	//最优策略
 	private Strategy bestStr;
+	public WebBestStrVO(){
+	}
 	public WebBestStrVO(Strategy bestStr){
 		this.setBestStr(bestStr);
 	}
