@@ -13,6 +13,10 @@ public class BasicInfoVO {
 	private String userName;
 	//用户头像
 	private ImageIcon userImage;
+	
+	public BasicInfoVO(){
+	}
+	
 	public BasicInfoVO(String userName,ImageIcon userImage){
 		this.setUserImage(userImage);
 		this.setUserName(userName);

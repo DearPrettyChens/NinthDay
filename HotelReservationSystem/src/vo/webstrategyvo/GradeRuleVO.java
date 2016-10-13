@@ -10,6 +10,8 @@ public class GradeRuleVO {
 	private int gradeNumber;
 	//上升一个等级所需的信用值
 	private int value;
+	public GradeRuleVO(){
+	}
 	public GradeRuleVO(int gradeNumber,int value){
 		this.setGradeNumber(gradeNumber);
 		this.setValue(value);

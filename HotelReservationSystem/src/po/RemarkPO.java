@@ -15,7 +15,11 @@ public class RemarkPO implements Serializable{
 	private double score;
 	//酒店的评论
 	private String remark;
-	
+	//空方法
+	public RemarkPO(){
+		
+	}
+	// 酒店评价
 	public RemarkPO(String hotelID,String customerID,double score,String remark){
 		this.setHotelID(hotelID);
 		this.setCustomerID(customerID);

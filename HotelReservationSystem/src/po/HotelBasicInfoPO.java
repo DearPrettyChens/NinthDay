@@ -44,6 +44,10 @@ public class HotelBasicInfoPO implements Serializable {
 	// 住户点评
 	private List<RemarkPO> remarks;
 
+	public HotelBasicInfoPO(){
+		
+	}
+	// 酒店基本信息，所有人的
 	public HotelBasicInfoPO(String hotelID, String name, ImageIcon hotelImage,String address, String telephone, int star, double score,
 			double lowestPrice, String introduce, String commonFacility, String activityFacility, String service,
 			String roomFacility, List remarks) {

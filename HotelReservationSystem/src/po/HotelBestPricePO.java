@@ -12,7 +12,11 @@ public class HotelBestPricePO implements Serializable{
 	private String hotelID;
 	//最优价格
 	private double bestPrice;
-	
+	//空方法
+	public HotelBestPricePO(){
+		
+	}
+	//酒店最优价格
 	public HotelBestPricePO(String hotelID,double bestPrice){
 		this.setBestPrice(bestPrice);
 		this.setHotelID(hotelID);

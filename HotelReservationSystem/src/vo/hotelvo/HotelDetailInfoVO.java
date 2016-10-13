@@ -42,6 +42,11 @@ public class HotelDetailInfoVO {
 	// 订单记录
 	private OrderVO[] orderRecordVO;
 
+	//空方法
+	public HotelDetailInfoVO(){
+		
+	}
+	//酒店细节信息 都可以看到
 	public HotelDetailInfoVO(String hotelName, String address, ImageIcon hotelImage,String telephone, int star, String introduce,
 			String commonFacility, String activityFacility, String service, String roomFacility, String[] enterprises,
 			HotelStrVO hotelStrVO, AvailableRoomInfoVO availableRoomInfoVO, OrderVO[] orderRecordVO) {

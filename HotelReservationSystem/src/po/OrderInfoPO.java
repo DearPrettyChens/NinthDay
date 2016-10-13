@@ -3,6 +3,8 @@ package po;
 import java.io.Serializable;
 import java.util.Date;
 
+import common.BedType;
+import common.Children;
 import common.OrderState;
 /**
  * 订单信息的PO类
@@ -27,7 +29,7 @@ public class OrderInfoPO implements Serializable {
 	//预定房型
 	private String roomType;
 	//预定床型
-	private String bedType;
+	private BedType bedType;
 	//预定房间数量
 	private int amount;
 	//预定时间
@@ -35,8 +37,9 @@ public class OrderInfoPO implements Serializable {
 	//入住人数
 	private int NumberOfPeople;
 	//有无儿童
-	private boolean hasChild;
+	private Children hasChild;
 	//是否评价
+	//枚举？----------------------------------//
 	private boolean hasRemarked;
 	//预计入住时间
 	private Date expectedCheckInTime;
@@ -53,11 +56,14 @@ public class OrderInfoPO implements Serializable {
 	private double price;
 	//订单状态
 	private OrderState state;
-	
+	//空方法
+	public OrderInfoPO(){
+		
+	}
 	//查看所有订单信息
 	public OrderInfoPO(String customerID, String orderID, String customerName, String customerTelephone,
-			String hotelName, String hotelID, String hotelTelephone, String roomType, String bedType, int amount,
-			Date orderTime, int numberOfPeople, boolean hasChild, boolean hasRemarked, Date expectedCheckInTime,
+			String hotelName, String hotelID, String hotelTelephone, String roomType, BedType bedType, int amount,
+			Date orderTime, int numberOfPeople, Children hasChild, boolean hasRemarked, Date expectedCheckInTime,
 			Date expectedCheckOutTime, Date lateCheckInTime, Date actualCheckInTime, Date actualCheckOutTime,
 			double price, OrderState state) {
 		this.setCustomerID(customerID);
@@ -85,8 +91,8 @@ public class OrderInfoPO implements Serializable {
 
 	//顾客下订单时的订单信息
 	public OrderInfoPO(String orderID,String hotelID, String customerID, String customerName, String customerTelephone,
-			Date expectedCheckInTime, Date expectedCheckOutTime,String roomType, String bedType, int amount,
-			int numberOfPeople, boolean hasChild,double price,OrderState state) {
+			Date expectedCheckInTime, Date expectedCheckOutTime,String roomType, BedType bedType, int amount,
+			int numberOfPeople, Children hasChild,double price,OrderState state) {
 		this.setOrderID(orderID);
 		this.setCustomerID(customerID);
 		this.setHotelID(hotelID);
@@ -106,8 +112,8 @@ public class OrderInfoPO implements Serializable {
 	//酒店管理人员checkin时获取的订单信息
 	//网站营销人员撤销异常订单时获取的订单信息
 	public OrderInfoPO(String orderID,String hotelID, String customerID, String customerName, String customerTelephone,
-			Date expectedCheckInTime, Date expectedCheckOutTime, Date lateCheckInTime,String roomType, String bedType, int amount,
-			int numberOfPeople, boolean hasChild,double price,OrderState state) {
+			Date expectedCheckInTime, Date expectedCheckOutTime, Date lateCheckInTime,String roomType, BedType bedType, int amount,
+			int numberOfPeople, Children hasChild,double price,OrderState state) {
 		this.setOrderID(orderID);
 		this.setCustomerID(customerID);
 		this.setHotelID(hotelID);
@@ -126,8 +132,8 @@ public class OrderInfoPO implements Serializable {
 	}
 	//酒店管理人员checkout时获取的订单信息
 	public OrderInfoPO(String orderID,String hotelID, String customerID, String customerName, String customerTelephone,
-			Date expectedCheckInTime, Date expectedCheckOutTime, Date lateCheckInTime,String roomType, String bedType, int amount,
-			int numberOfPeople, boolean hasChild,OrderState state,Date actualCheckInTime){
+			Date expectedCheckInTime, Date expectedCheckOutTime, Date lateCheckInTime,String roomType, BedType bedType, int amount,
+			int numberOfPeople, Children hasChild,OrderState state,Date actualCheckInTime){
 		this.setOrderID(orderID);
 		this.setCustomerID(customerID);
 		this.setHotelID(hotelID);
@@ -208,11 +214,11 @@ public class OrderInfoPO implements Serializable {
 		this.roomType = roomType;
 	}
 
-	public String getBedType() {
+	public BedType getBedType() {
 		return bedType;
 	}
 
-	public void setBedType(String bedType) {
+	public void setBedType(BedType bedType) {
 		this.bedType = bedType;
 	}
 
@@ -240,11 +246,11 @@ public class OrderInfoPO implements Serializable {
 		NumberOfPeople = numberOfPeople;
 	}
 
-	public boolean isHasChild() {
+	public Children isHasChild() {
 		return hasChild;
 	}
 
-	public void setHasChild(boolean hasChild) {
+	public void setHasChild(Children hasChild) {
 		this.hasChild = hasChild;
 	}
 

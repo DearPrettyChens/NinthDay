@@ -26,7 +26,9 @@ public class DetailInfoVO {
 	private String enterprise;
 	// 生日
 	private Date birth;
-	//企业会员的构造vo
+
+	public DetailInfoVO(){
+	}
 	public DetailInfoVO(String userName, String telephone, ImageIcon userImage, UserType userType, String enterprise) {
 		this.setUserName(userName);
 		this.setTelephone(telephone);

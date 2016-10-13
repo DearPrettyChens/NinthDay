@@ -4,6 +4,8 @@ import java.awt.Image;
 import java.util.List;
 
 import javax.swing.ImageIcon;
+
+import common.TradingArea;
 /**
  * 酒店基本信息vo 给酒店工作人员看的
  * @author CYF
@@ -20,7 +22,7 @@ public class HotelBasicInfoVO {
 	// 地址
 	private String address;
 	// 商圈
-	private String businessArea;
+	private TradingArea tradingArea;
 	// 联系方式
 	private String telephone;
 	// 星级
@@ -37,15 +39,19 @@ public class HotelBasicInfoVO {
 	private String roomFacility;
 	// 合作企业
 	private String[] enterprises;
-
-	public HotelBasicInfoVO(String hotelID, String hotelName,ImageIcon hotelImage, String address, String businessArea, String telephone,
+    //空方法
+	public HotelBasicInfoVO(){
+		
+	}
+	//酒店基本信息
+	public HotelBasicInfoVO(String hotelID, String hotelName,ImageIcon hotelImage, String address, TradingArea tradingArea, String telephone,
 			int star, String introduce, String commonFacility, String activityFacility, String service,
 			String roomFacility, String[] enterprises) {
 		this.setHotelID(hotelID);
 		this.setHotelName(hotelName);
 		this.setHotelImage(hotelImage);
 		this.setAddress(address);
-		this.setBusinessArea(businessArea);
+		this.setTradingArea(tradingArea);
 		this.setTelephone(telephone);
 		this.setStar(star);
 		this.setIntroduce(introduce);
@@ -79,12 +85,12 @@ public class HotelBasicInfoVO {
 		this.address = address;
 	}
 
-	public String getBusinessArea() {
-		return businessArea;
+	public TradingArea getTradingArea() {
+		return tradingArea;
 	}
 
-	public void setBusinessArea(String businessArea) {
-		this.businessArea = businessArea;
+	public void setTradingArea(TradingArea tradingArea) {
+		this.tradingArea = tradingArea;
 	}
 
 	public String getTelephone() {

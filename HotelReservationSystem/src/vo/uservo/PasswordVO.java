@@ -9,6 +9,10 @@ public class PasswordVO {
 	private String userID;
 	//用户密码
 	private String password;
+	
+	public PasswordVO(){
+	}
+	
 	public PasswordVO(String userID,String password){
 		this.setUserID(userID);
 		this.setPassword(password);

@@ -2,6 +2,7 @@ package vo.hotelvo;
 
 import java.util.Date;
 
+import common.Children;
 import common.OrderState;
 /**
  * 酒店看到的订单详细信息vo
@@ -36,15 +37,20 @@ public class HotelOrderInfoVO {
 		//入住人数
 		private int numOfPeople;
 		//有无儿童
-		private boolean hasChild;
+		private Children hasChild;
 		//生成订单时间
 		private Date orderTime;
 		//最晚入住时间
 		private Date lateCheckInTime;
 		
+		//空方法
+		public HotelOrderInfoVO(){
+			
+		}
+		//酒店看到的本酒店的订单信息
 		public HotelOrderInfoVO(String orderId,String customerName,double price,
 				String lodgerName,String lodgerTel,Date expectedCheckInTime,Date expectedCheckOutTime,
-				String roomType,int roomNumber,int numberOfPeople,boolean hasChild,Date actualCheckInTime,
+				String roomType,int roomNumber,int numberOfPeople,Children hasChild,Date actualCheckInTime,
 				Date actualCheckOutTime,Date orderTime,OrderState orderState,String hotelName,
 				String hotelTel,Date lateCheckInTime){
 			this.setOrderId(orderId);
@@ -169,14 +175,6 @@ public class HotelOrderInfoVO {
 			this.numOfPeople = numOfPeople;
 		}
 
-		public boolean isHasChild() {
-			return hasChild;
-		}
-
-		public void setHasChild(boolean hasChild) {
-			this.hasChild = hasChild;
-		}
-
 		public Date getOrderTime() {
 			return orderTime;
 		}
@@ -191,6 +189,14 @@ public class HotelOrderInfoVO {
 
 		public void setLateCheckInTime(Date lateCheckInTime) {
 			this.lateCheckInTime = lateCheckInTime;
+		}
+
+		public Children getHasChild() {
+			return hasChild;
+		}
+
+		public void setHasChild(Children hasChild) {
+			this.hasChild = hasChild;
 		}
 
 	

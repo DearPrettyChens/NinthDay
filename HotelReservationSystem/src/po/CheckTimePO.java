@@ -12,6 +12,11 @@ public class CheckTimePO implements Serializable{
 	private String orderNumber;
 	//入住或退房时间，因为调用方法不同，可以只用一个time表示
 	private Date checkTime;
+	//空方法
+	public CheckTimePO(){
+		
+	}
+	//入住时间与退房时间
 	public CheckTimePO(String orderNumber,Date checkTime){
 		this.setOrderNumber(orderNumber);
 		this.setCheckTime(checkTime);

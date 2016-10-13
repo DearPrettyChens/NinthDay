@@ -10,7 +10,7 @@ import java.awt.Image;
  */
 public class HotelListVO {
 	// 酒店图片
-	// Image hotelImage;
+    private Image hotelImage;
 	// 酒店id
 	private String hotelID;
 	// 酒店名字
@@ -24,6 +24,9 @@ public class HotelListVO {
 	// 酒店最低价格
 	private double lowestPrice;
 
+	public HotelListVO(){
+	}
+	
 	public HotelListVO(String hotelID, String hotelName, String hotelAddress, int star, double remark,
 			double lowestPrice) {
 		this.setHotelID(hotelID);
