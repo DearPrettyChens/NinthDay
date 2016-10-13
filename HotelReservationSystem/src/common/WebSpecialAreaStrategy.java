@@ -8,7 +8,12 @@ import java.util.Map;
  *
  */
 public class WebSpecialAreaStrategy extends Strategy {
+<<<<<<< HEAD
 	private Map<String,Double> allDiscount;
+=======
+
+	private Map<TradingArea,Double> allDiscount;
+>>>>>>> master
 	private WebStrategyType type=WebStrategyType.SPECIALAREA;
 	/**
 	 * 初始化该商圈的折扣值
@@ -21,7 +26,7 @@ public class WebSpecialAreaStrategy extends Strategy {
 	/**
 	 * 返回该商圈的折扣值
 	 * @param specialArea
-	 * @return
+	 * @return double
 	 */
 	public double getDiscount(String specialArea) {
 		return allDiscount.get(specialArea);
@@ -37,7 +42,7 @@ public class WebSpecialAreaStrategy extends Strategy {
 	}
 	/**
 	 * 返回所有商圈及其折扣值
-	 * @return
+	 * @return Map<String,Double>
 	 */
 	public Map<String,Double> getAllDiscount(){
 		return allDiscount;
@@ -45,7 +50,14 @@ public class WebSpecialAreaStrategy extends Strategy {
 	
 	/**
 	 * 返回网站策略类型
+<<<<<<< HEAD
 	 * @return
+=======
+	 * @param  无
+	 * @return  WebStrategyType
+	 * @throws  无
+	 * 
+>>>>>>> master
 	 */
 	public WebStrategyType getType() {
 		return type;

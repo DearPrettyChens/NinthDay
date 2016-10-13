@@ -10,6 +10,7 @@ import po.HotelWorkerListPO;
 import po.WebMarketManDetailPO;
 import po.WebMarketManListPO;
 
+
 public interface PersonnelDataService {
 	public void initial();
 	public ResultMessage addCustomer(CustomerDetailPO customerDetailPO);
