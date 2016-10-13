@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * 网站会员特惠策略
  * @author CLL
- *
+ * @version 1.0
  */
 public class WebVIPStrategy extends Strategy {
 	private Map<Integer,Double> allDiscount;
@@ -20,7 +20,7 @@ public class WebVIPStrategy extends Strategy {
 	/**
 	 * 获取该等级的折扣值
 	 * @param VIPgrade
-	 * @return
+	 * @return double
 	 */
 	public double getDiscount(int VIPgrade) {
 		return allDiscount.get(VIPgrade);
@@ -36,7 +36,7 @@ public class WebVIPStrategy extends Strategy {
 	}
 	/**
 	 * 返回所有等级的折扣值
-	 * @return
+	 * @return Map<Integer,Double>
 	 */
 	public Map<Integer,Double> getAllDiscount(){
 		return allDiscount;

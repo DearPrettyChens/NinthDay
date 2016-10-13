@@ -20,7 +20,7 @@ public class WebSpecialAreaStrategy extends Strategy {
 	/**
 	 * 返回该商圈的折扣值
 	 * @param specialArea
-	 * @return
+	 * @return double
 	 */
 	public double getDiscount(TradingArea specialArea) {
 		return allDiscount.get(specialArea);
@@ -36,7 +36,7 @@ public class WebSpecialAreaStrategy extends Strategy {
 	}
 	/**
 	 * 返回所有商圈及其折扣值
-	 * @return
+	 * @return Map<TradingArea,Double>
 	 */
 	public Map<TradingArea,Double> getAllDiscount(){
 		return allDiscount;
