@@ -1,6 +1,7 @@
 package businesslogic.availableroombl;
 
 import blservice.availableroomblservice.AvailableRoomBLService;
+import common.BedType;
 import vo.availableroomvo.AvailableRoomInfoVO;
 import vo.availableroomvo.AvailableRoomNumberVO;
 /**
@@ -15,7 +16,7 @@ public class AvailableRoomBL_Driver {
 		System.out.println(stub.confirmAvailableRoomInfo(availableRoomInfoVO));
 		System.out.println(stub.setAvailableRoomNumber(availableRoomNumberVO));
 		System.out.println(stub.setBestPrice(0.9));
-		System.out.println(stub.getRoomPrice("0001", null));
+		System.out.println(stub.getRoomPrice("0001", BedType.BIGBED));
 		System.out.println(stub.checkAvailableRoomNumber(availableRoomNumberVO));
 	}
 	

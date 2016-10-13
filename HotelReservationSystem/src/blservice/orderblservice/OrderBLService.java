@@ -99,7 +99,7 @@ public interface OrderBLService {
 	
 	/**
 	 * 保存订单实际入住时间
-	 * @param time String型，界面传递过来的实际入住时间
+	 * @param time Date型，界面传递过来的实际入住时间
 	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
 	 * @throws 未定
 	 *
@@ -108,7 +108,7 @@ public interface OrderBLService {
 	
 	/**
 	 * 保存订单实际退房时间
-	 * @param time String型，界面传递过来的实际退房时间
+	 * @param time Date型，界面传递过来的实际退房时间
 	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
 	 * @throws 未定
 	 *

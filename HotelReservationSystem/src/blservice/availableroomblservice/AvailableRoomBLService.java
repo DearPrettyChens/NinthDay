@@ -1,5 +1,6 @@
 package blservice.availableroomblservice;
 
+import common.BedType;
 import common.ResultMessage;
 import vo.availableroomvo.AvailableRoomInfoVO;
 import vo.availableroomvo.AvailableRoomNumberVO;
@@ -52,12 +53,12 @@ public interface AvailableRoomBLService {
 	
 	/**
 	 * 订单计算价格的时候，来获取该房型价格
-	 * @param hotelID String型,roomType String型，传递酒店编号和房间类型
+	 * @param hotelID String型,bedType BedType型，传递酒店编号和房间类型
 	 * @return double 返回该房型价格
 	 * @throws 未定
 	 *
 	 */
-	public double getRoomPrice (String hotelID,String roomType);
+	public double getRoomPrice (String hotelID,BedType bedType);
 	
 	/**
 	 * 检测是否有足够的可用客房数量
