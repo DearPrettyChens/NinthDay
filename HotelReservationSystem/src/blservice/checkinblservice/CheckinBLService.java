@@ -1,5 +1,6 @@
 package blservice.checkinblservice;
 
+import common.BedType;
 import common.ResultMessage;
 import vo.checkinvo.AvailableRoomInfoVO;
 import vo.checkinvo.AvailableRoomNumberVO;
@@ -60,12 +61,12 @@ public interface CheckinBLService {
 	
 	/**
 	 * 判断输入的可用客房数量是否超过该类型客房总数
-	 * @param roomType String型,number String型，界面传递过来的房间类型和房间数量
+	 * @param bedType BedType型,number String型，界面传递过来的房间类型和房间数量
 	 * @return ResultMessage 未超过返回SUCCESS,超过返回FAIL
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage checkAvailableRoomNumber(String roomType,String number);
+	public ResultMessage checkAvailableRoomNumber(BedType bedType,String number);
 	
 	/**
 	 * 修改该酒店可用客房信息

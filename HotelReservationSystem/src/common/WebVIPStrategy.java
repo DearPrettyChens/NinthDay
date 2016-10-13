@@ -9,6 +9,7 @@ import java.util.Map;
  */
 public class WebVIPStrategy extends Strategy {
 	private Map<Integer,Double> allDiscount;
+	private WebStrategyType type=WebStrategyType.VIP;
 	/**
 	 * 初始化该等级的折扣值
 	 * @param VIPgrade
@@ -41,4 +42,9 @@ public class WebVIPStrategy extends Strategy {
 	public Map<Integer,Double> getAllDiscount(){
 		return allDiscount;
 	}
+	
+	public WebStrategyType getType() {
+		return type;
+	}
+
 }

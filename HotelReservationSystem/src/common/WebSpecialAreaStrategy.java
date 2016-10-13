@@ -21,7 +21,7 @@ public class WebSpecialAreaStrategy extends Strategy {
 	/**
 	 * 返回该商圈的折扣值
 	 * @param specialArea
-	 * @return double
+	 * @return
 	 */
 	public double getDiscount(String specialArea) {
 		return allDiscount.get(specialArea);
@@ -37,7 +37,7 @@ public class WebSpecialAreaStrategy extends Strategy {
 	}
 	/**
 	 * 返回所有商圈及其折扣值
-	 * @return Map<String,Double>
+	 * @return
 	 */
 	public Map<String,Double> getAllDiscount(){
 		return allDiscount;
@@ -45,10 +45,7 @@ public class WebSpecialAreaStrategy extends Strategy {
 	
 	/**
 	 * 返回网站策略类型
-	 * @param  无
-	 * @return  WebStrategyType
-	 * @throws  无
-	 * 
+	 * @return
 	 */
 	public WebStrategyType getType() {
 		return type;
