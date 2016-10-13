@@ -21,7 +21,7 @@ public class WebVIPStrategy extends Strategy {
 	/**
 	 * 获取该等级的折扣值
 	 * @param VIPgrade
-	 * @return
+	 * @return double
 	 */
 	public double getDiscount(int VIPgrade) {
 		return allDiscount.get(VIPgrade);
@@ -37,7 +37,7 @@ public class WebVIPStrategy extends Strategy {
 	}
 	/**
 	 * 返回所有等级的折扣值
-	 * @return
+	 * @return Map<Integer,Double>
 	 */
 	public Map<Integer,Double> getAllDiscount(){
 		return allDiscount;
