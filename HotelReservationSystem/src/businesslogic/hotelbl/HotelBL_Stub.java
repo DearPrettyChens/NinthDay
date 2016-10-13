@@ -2,16 +2,31 @@ package businesslogic.hotelbl;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+=======
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
+>>>>>>> master
 import blservice.hotelblservice.HotelBLService;
 import common.ResultMessage;
 import vo.hotelvo.HotelBasicInfoVO;
 import vo.hotelvo.HotelDetailInfoVO;
 import vo.hotelvo.HotelOrderInfoVO;
 import vo.hotelvo.HotelOrderVO;
+<<<<<<< HEAD
 /**
  * 模拟酒店模块界面层和逻辑层交互的实现
  * @author CLL
  *
+=======
+
+
+/**
+ * 模拟酒店模块界面层和逻辑层交互的实现
+ * @author csy
+ * @version 1.0
+ * 
+>>>>>>> master
  */
 public class HotelBL_Stub implements HotelBLService{
 
