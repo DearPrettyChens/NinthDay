@@ -40,7 +40,8 @@ public class OrderInfoVO {
 	//酒店联系方式（4位区号＋8位数字）
 	private String hotelTel;
 	//房间类型
-	private BedType roomType;
+	private String roomType;
+	private BedType bedType;
 	//房间数量
 	private int roomNum;
 	//入住人数
@@ -58,7 +59,7 @@ public class OrderInfoVO {
 	
 	public OrderInfoVO(String orderId,String customerName,double price,ArrayList<Strategy> strategies,
 			String lodgerName,String lodgerTel,Date expectCheckInTime,Date expectCheckOutTime,
-			BedType roomType,int roomNum,int lodgerNum,Children children,Date actualCheckInTime,
+			BedType bedType,String roomType,int roomNum,int lodgerNum,Children children,Date actualCheckInTime,
 			Date actualCheckOutTime,Date orderTime,OrderState orderState,String hotelName,
 			String hotelTel,Date latestCheckInTime){
 		this.orderId=orderId;
@@ -69,6 +70,7 @@ public class OrderInfoVO {
 		this.lodgerTel=lodgerName;
 		this.expectCheckInTime=expectCheckInTime;
 		this.expectCheckOutTime=expectCheckOutTime;
+		this.setBedType(bedType);
 		this.setRoomType(roomType);
 		this.setRoomNum(roomNum);
 		this.setLodgerNum(lodgerNum);
@@ -202,11 +204,11 @@ public class OrderInfoVO {
 		this.latestCheckInTime = latestCheckInTime;
 	}
 
-	public BedType getRoomType() {
+	public String getRoomType() {
 		return roomType;
 	}
 
-	public void setRoomType(BedType roomType) {
+	public void setRoomType(String roomType) {
 		this.roomType = roomType;
 	}
 
@@ -232,6 +234,14 @@ public class OrderInfoVO {
 
 	public void setChildren(Children children) {
 		this.children = children;
+	}
+
+	public BedType getBedType() {
+		return bedType;
+	}
+
+	public void setBedType(BedType bedType) {
+		this.bedType = bedType;
 	}
 
 	
