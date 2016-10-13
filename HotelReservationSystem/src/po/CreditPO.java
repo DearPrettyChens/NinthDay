@@ -69,12 +69,5 @@ public class CreditPO  implements Serializable{
 	}
 	public void setTime(Date time) {
 		this.time = time;
-	
-	
-	
-	
-	
-
-	
-
+	}
 }
