@@ -74,10 +74,10 @@ public class CheckinInfoVO {
 	public void setRoomnumber(String roomnumber) {
 		this.roomNumber = roomnumber;
 	}
-	public BedType getRoomtype() {
+	public BedType getBedtype() {
 		return bedType;
 	}
-	public void setRoomtype(String roomtype) {
+	public void setBedtype(BedType bedType) {
 		this.bedType = bedType;
 	}
 	public Date getCheckintime() {

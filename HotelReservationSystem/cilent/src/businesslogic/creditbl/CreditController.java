@@ -5,34 +5,35 @@ import common.ResultMessage;
 import vo.creditvo.CreditInfoVO;
 import vo.creditvo.CreditVO;
 /**
- * 模拟管理信用模块界面层与逻辑层交互的实现
+ * credit模块的控制类
  * @author CLL
- *
+ * @version 1.0
  */
-public class CreditBL_Stub implements CreditBLService{
-
+public class CreditController implements CreditBLService {
+	//持有credit的引用
+	Credit credit=new Credit();
 	@Override
 	public CreditInfoVO getCreditInfo(String customerID) {
 		// TODO Auto-generated method stub
-		return new CreditInfoVO();
+		return null;
 	}
 
 	@Override
 	public ResultMessage addCredit(CreditVO creditVO) {
 		// TODO Auto-generated method stub
-		return ResultMessage.SUCCESS;
+		return null;
 	}
 
 	@Override
 	public ResultMessage cutCredit(CreditVO creditVO) {
 		// TODO Auto-generated method stub
-		return ResultMessage.SUCCESS;
+		return null;
 	}
 
 	@Override
-	public ResultMessage confirmCreditDeposit(double money,String customerName) {
+	public ResultMessage confirmCreditDeposit(double money, String customerName) {
 		// TODO Auto-generated method stub
-		return ResultMessage.SUCCESS;
+		return null;
 	}
 
 }

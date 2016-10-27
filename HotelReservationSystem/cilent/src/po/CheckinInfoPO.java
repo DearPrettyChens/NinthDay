@@ -38,7 +38,7 @@ public class CheckinInfoPO implements Serializable{
 		
 	}
 	
-	public CheckinInfoPO(String[] name,String[] ID,String []tel,String roomtype,String roomnumber
+	public CheckinInfoPO(String[] name,String[] ID,String []tel,String roomtype,BedType bedtype,String roomnumber
 			,Date checkintime,Date checkouttime,String hotelnumber,String ordernumber){
 		this.name=name;
 		this.ID=ID;
