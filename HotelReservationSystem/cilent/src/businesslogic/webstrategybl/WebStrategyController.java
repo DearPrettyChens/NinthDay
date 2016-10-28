@@ -40,12 +40,10 @@ public class WebStrategyController implements WebStrategyBLService{
 		default: return null;
 		}
 	}
-
 	@Override
 	public ResultMessage confirmGradeRule(GradeRuleVO gradeRuleVO) {
 		return webStrategy.confirmGradeRule(new WebGradeRule(),gradeRuleVO);
 	}
-
 	@Override
 	public ResultMessage confirmWebStrategy(WebStrVO webStrVO) {
 		//return webStrategy.confirmWebStrategy(webStrVO);

@@ -58,7 +58,7 @@ public interface WebStrategyBLService {
 	 *注意点：方法里面要有检测：checkDiscountRank：（折扣范围）
 	 *checkTime：（保证从小到大）checkPositiveNum：（保证输入正数）
 	 */
-	public ResultMessage comfirmGradeRule(GradeRuleVO gradeRuleVO);
+	public ResultMessage confirmGradeRule(GradeRuleVO gradeRuleVO);
 	
 	/**
 	 * 保存网站策略信息
@@ -67,6 +67,6 @@ public interface WebStrategyBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage comfirmWebStrategy(WebStrVO webStrVO);
+	public ResultMessage confirmWebStrategy(WebStrVO webStrVO);
 	
 }
