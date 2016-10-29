@@ -11,6 +11,8 @@ public class RemarkPO implements Serializable{
 	private String hotelID;
 	//用户id
 	private String customerID;
+	//订单号
+	private String orderID;
 	//给酒店的打分
 	private double score;
 	//酒店的评论

@@ -58,7 +58,7 @@ public interface HotelBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ArrayList<HotelOrderVO> getHotelOrder(String hotelID);
+	public ArrayList<HotelOrderVO> getHotelOrderList(String hotelID);
 	
 	/**
 	 * 获取酒店的订单详细信息

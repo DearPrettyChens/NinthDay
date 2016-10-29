@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import common.ResultMessage;
+import vo.availableroomvo.AvailableRoomNumberVO;
+import vo.hotelvo.HotelDetailInfoVO;
 import vo.ordervo.OrderInfoVO;
 import vo.ordervo.OrderVO;
 import vo.ordervo.RemarkVO;
+import vo.ordervo.StrategyVO;
 import vo.ordervo.TypeInfoVO;
 /**
  * OrderBLService提供接口，用来对生成订单以及对有关订单状态的操作（执行，撤销，评价），浏览查看订单信息（包括搜索）
@@ -45,12 +48,21 @@ public interface OrderBLService {
 	
 	/**
 	 * 新增订单信息
-	 * @param orderInfoVO OrderInfoVO型，界面传递过来的订单信息
+	 * @param 
 	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage confirmAddOrder(OrderInfoVO orderInfoVO);
+	public ResultMessage confirmAddOrder();
+	
+	/**
+	 * 产生优惠信息
+	 * @param orderInfoVO OrderInfoVO型，界面传递过来的订单信息
+	 * @return 返回策略信息和优惠价格
+	 * @throws 未定
+	 *
+	 */
+	public StrategyVO next(OrderInfoVO orderinfovo);
 	
 	/**
 	 * 获取订单详细信息
@@ -89,32 +101,23 @@ public interface OrderBLService {
 	public ResultMessage remarkOrder(RemarkVO remarkVO);
 	
 	/**
-	 * 获取订单价格
-	 * @param orderID String 型,传递订单号
-	 * @return  double ，将订单总价返回给界面
-	 * @throws 未定
-	 *
-	 */
-	public double getPrice(String orderID);
-	
-	/**
 	 * 保存订单实际入住时间
-<<<<<<< HEAD
-	 * @param time Date型，界面传递过来的实际入住时间
+	 * @param time Date型，orderID string型，界面传递过来的实际入住时间和订单编号
 	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage setCheckinTime(Date time);
+
+	public ResultMessage setCheckinTime(Date time,String orderID);
 	
 	/**
 	 * 保存订单实际退房时间
-	 * @param time Date型，界面传递过来的实际退房时间
+	 * @param time Date型，orderID string型界面传递过来的实际退房时间和订单编号
 	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage setCheckoutTime(Date time);
+	public ResultMessage setCheckoutTime(Date time,String orderID);
 	
 	/**
 	 * 增加顾客订单总价全部或二分之一的信用值
@@ -124,5 +127,23 @@ public interface OrderBLService {
 	 *
 	 */
 	public ResultMessage setReturnCredit(int creditNum);
+	
+	/**
+	 * 生成订单的界面上需要酒店的信息（可用客房+酒店地址电话）
+	 * @param hotelID string 型，界面传递过来的酒店编号
+	 * @return HotelDetailInfoVO，返回酒店详细信息
+	 * @throws 未定
+	 *
+	 */
+	public HotelDetailInfoVO getHotelDetailInfo(String hotelID);
+	
+	/**
+	 * 检查订单上可用客房是否数量足够
+	 * @param vo AvailableRoomNumberVO型，传递可用客房数量信息
+	 * @return ResultMessage，数量足够返回SUCCESS,数量不够返回NOTENOUGHAVAILABLEROOM,
+	 * @throws 未定
+	 *
+	 */
+	public ResultMessage checkAvailableRoomNumber (AvailableRoomNumberVO vo);
 	
 }

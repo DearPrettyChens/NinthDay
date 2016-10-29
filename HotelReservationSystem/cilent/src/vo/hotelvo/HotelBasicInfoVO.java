@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 
+import common.City;
 import common.TradingArea;
 /**
  * 酒店基本信息vo 给酒店工作人员看的
@@ -13,14 +14,15 @@ import common.TradingArea;
  */
 
 public class HotelBasicInfoVO {
-	// 酒店id
-	private String hotelID;
+	
 	// 酒店名
 	private String hotelName;
 	//酒店照片
 	private ImageIcon hotelImage;
 	// 地址
 	private String address;
+	//城市
+	private City city;
 	// 商圈
 	private TradingArea tradingArea;
 	// 联系方式
@@ -38,19 +40,20 @@ public class HotelBasicInfoVO {
 	// 客房设施
 	private String roomFacility;
 	// 合作企业
-	private String[] enterprises;
+	private String enterprises;
     //空方法
 	public HotelBasicInfoVO(){
 		
 	}
 	//酒店基本信息
-	public HotelBasicInfoVO(String hotelID, String hotelName,ImageIcon hotelImage, String address, TradingArea tradingArea, String telephone,
+	public HotelBasicInfoVO(String hotelName,ImageIcon hotelImage, String address,City city, TradingArea tradingArea, String telephone,
 			int star, String introduce, String commonFacility, String activityFacility, String service,
-			String roomFacility, String[] enterprises) {
-		this.setHotelID(hotelID);
+			String roomFacility, String enterprises) {
+	
 		this.setHotelName(hotelName);
 		this.setHotelImage(hotelImage);
 		this.setAddress(address);
+		this.setCity(city);
 		this.setTradingArea(tradingArea);
 		this.setTelephone(telephone);
 		this.setStar(star);
@@ -61,13 +64,7 @@ public class HotelBasicInfoVO {
 		this.setEnterprises(enterprises);
 	}
 
-	public String getHotelID() {
-		return hotelID;
-	}
-
-	public void setHotelID(String hotelID) {
-		this.hotelID = hotelID;
-	}
+	
 
 	public String getHotelName() {
 		return hotelName;
@@ -149,11 +146,11 @@ public class HotelBasicInfoVO {
 		this.roomFacility = roomFacility;
 	}
 
-	public String[] getEnterprises() {
+	public String getEnterprises() {
 		return enterprises;
 	}
 
-	public void setEnterprises(String[] enterprises) {
+	public void setEnterprises(String enterprises) {
 		this.enterprises = enterprises;
 	}
 
@@ -163,6 +160,12 @@ public class HotelBasicInfoVO {
 
 	public void setHotelImage(ImageIcon hotelImage) {
 		this.hotelImage = hotelImage;
+	}
+	public City getCity() {
+		return city;
+	}
+	public void setCity(City city) {
+		this.city = city;
 	}
 
 }

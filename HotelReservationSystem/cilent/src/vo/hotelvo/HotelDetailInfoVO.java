@@ -1,6 +1,7 @@
 package vo.hotelvo;
 
 import java.awt.Image;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 
@@ -13,6 +14,7 @@ import vo.ordervo.OrderVO;
  * @version 1.0
  */
 public class HotelDetailInfoVO {
+	
 	// 酒店名称
 	private String hotelName;
 	// 酒店地址
@@ -34,11 +36,15 @@ public class HotelDetailInfoVO {
 	// 客房设施
 	private String roomFacility;
 	// 合作企业
-	private String[] enterprises;
+	private String enterprises;
 	// 酒店策略
 	private HotelStrVO hotelStrVO;
 	// 可用房间信息
 	private AvailableRoomInfoVO availableRoomInfoVO;
+	//评分
+	private double remarkNumber;
+	//评论
+	private ArrayList<String> remarkDetailInfo;
 	// 订单记录
 	private OrderVO[] orderRecordVO;
 
@@ -48,8 +54,8 @@ public class HotelDetailInfoVO {
 	}
 	//酒店细节信息 都可以看到
 	public HotelDetailInfoVO(String hotelName, String address, ImageIcon hotelImage,String telephone, int star, String introduce,
-			String commonFacility, String activityFacility, String service, String roomFacility, String[] enterprises,
-			HotelStrVO hotelStrVO, AvailableRoomInfoVO availableRoomInfoVO, OrderVO[] orderRecordVO) {
+			String commonFacility, String activityFacility, String service, String roomFacility, String enterprises,
+			HotelStrVO hotelStrVO, AvailableRoomInfoVO availableRoomInfoVO, OrderVO[] orderRecordVO,double remarkNumber,ArrayList<String> remarkDetailInfo) {
 		this.setHotelName(hotelName);
 		this.setAddress(address);
 		this.setHotelImage(hotelImage);
@@ -64,6 +70,8 @@ public class HotelDetailInfoVO {
 		this.setHotelStrVO(hotelStrVO);
 		this.setAvailableRoomInfoVo(availableRoomInfoVO);
 		this.setOrderRecordVO(orderRecordVO);
+	    this.setRemarkDetailInfo(remarkDetailInfo);
+	    this.setRemarkNumber(remarkNumber);
 	}
 
 	public String getHotelName() {
@@ -138,11 +146,11 @@ public class HotelDetailInfoVO {
 		this.roomFacility = roomFacility;
 	}
 
-	public String[] getEnterprises() {
+	public String getEnterprises() {
 		return enterprises;
 	}
 
-	public void setEnterprises(String[] enterprises) {
+	public void setEnterprises(String enterprises) {
 		this.enterprises = enterprises;
 	}
 
@@ -176,6 +184,18 @@ public class HotelDetailInfoVO {
 
 	public void setHotelImage(ImageIcon hotelImage) {
 		this.hotelImage = hotelImage;
+	}
+	public double getRemarkNumber() {
+		return remarkNumber;
+	}
+	public void setRemarkNumber(double remarkNumber) {
+		this.remarkNumber = remarkNumber;
+	}
+	public ArrayList<String> getRemarkDetailInfo() {
+		return remarkDetailInfo;
+	}
+	public void setRemarkDetailInfo(ArrayList<String> remarkDetailInfo) {
+		this.remarkDetailInfo = remarkDetailInfo;
 	}
 
 }

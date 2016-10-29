@@ -6,6 +6,9 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 
+import common.City;
+import common.TradingArea;
+
 /**
  * 酒店基本信息
  * 
@@ -17,8 +20,12 @@ public class HotelBasicInfoPO implements Serializable {
 	private String hotelID;
 	// 酒店名
 	private String name;
-	//酒店图片
+	// 酒店图片
 	private ImageIcon hotelImage;
+	// 城市
+	private City city;
+	// 商圈
+	private TradingArea tradingArea;
 	// 地址
 	private String address;
 	// 联系方式
@@ -43,14 +50,19 @@ public class HotelBasicInfoPO implements Serializable {
 	private String roomFacility;
 	// 住户点评
 	private List<RemarkPO> remarks;
+	//评价过的订单总数
+	private int remarkOrderNumber;
+	//评分
+	private int remarkNumber;
+	
+	public HotelBasicInfoPO() {
 
-	public HotelBasicInfoPO(){
-		
 	}
+
 	// 酒店基本信息，所有人的
-	public HotelBasicInfoPO(String hotelID, String name, ImageIcon hotelImage,String address, String telephone, int star, double score,
-			double lowestPrice, String introduce, String commonFacility, String activityFacility, String service,
-			String roomFacility, List remarks) {
+	public HotelBasicInfoPO(String hotelID, String name, ImageIcon hotelImage, String address, String telephone,
+			int star, double score, double lowestPrice, String introduce, String commonFacility,
+			String activityFacility, String service, String roomFacility, List remarks,int remarkOrderNumber,int remarkNumber) {
 		this.setHotelID(hotelID);
 		this.setName(name);
 		this.setAddress(address);
@@ -64,7 +76,9 @@ public class HotelBasicInfoPO implements Serializable {
 		this.setService(service);
 		this.setRoomFacility(roomFacility);
 		this.setRemarks(remarks);
-
+		this.setRemarkNumber(remarkNumber);
+        this.setRemarkOrderNumber(remarkOrderNumber);
+		
 	}
 
 	public String getHotelID() {
@@ -177,6 +191,38 @@ public class HotelBasicInfoPO implements Serializable {
 
 	public void setHotelImage(ImageIcon hotelImage) {
 		this.hotelImage = hotelImage;
+	}
+
+	public City getCity() {
+		return city;
+	}
+
+	public void setCity(City city) {
+		this.city = city;
+	}
+
+	public TradingArea getTradingArea() {
+		return tradingArea;
+	}
+
+	public void setTradingArea(TradingArea tradingArea) {
+		this.tradingArea = tradingArea;
+	}
+
+	public int getRemarkOrderNumber() {
+		return remarkOrderNumber;
+	}
+
+	public void setRemarkOrderNumber(int remarkOrderNumber) {
+		this.remarkOrderNumber = remarkOrderNumber;
+	}
+
+	public int getRemarkNumber() {
+		return remarkNumber;
+	}
+
+	public void setRemarkNumber(int remarkNumber) {
+		this.remarkNumber = remarkNumber;
 	}
 
 }

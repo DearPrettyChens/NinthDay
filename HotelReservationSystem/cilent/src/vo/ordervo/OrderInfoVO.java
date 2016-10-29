@@ -18,18 +18,16 @@ import common.BedType;
  * @version 1.0
  */
 public class OrderInfoVO {
-	// 顾客编号
-	private String customerID;
 	// 订单编号
 	private String orderID;
 	// 顾客生成订单时填写的顾客姓名
 	private String customerName;
-	// 顾客生成订单时填写的顾客联系方式
-	private String customerTelephone;
+	// 入住人姓名
+	private String liveinPersonName;
+	// 入住人联系方式
+	private String liveinPersonTelephone;
 	// 酒店名称
 	private String hotelName;
-	// 酒店ID
-	private String hotelID;
 	// 酒店联系方式
 	private String hotelTelephone;
 	// 预定房型
@@ -45,14 +43,12 @@ public class OrderInfoVO {
 	// 有无儿童
 	private Children hasChild;
 	// 是否评价
-	// 枚举？----------------------------------//
 	private boolean hasRemarked;
 	// 预计入住时间
 	private Date expectedCheckInTime;
 	// 预计退房时间
 	private Date expectedCheckOutTime;
-	// ＊＊＊＊＊＊＊＊＊＊＊＊＊疑问:最晚入住时间在什么时候生成？下订单时会产生吗？//
-	// 最晚入住时间
+	// 最晚入住时间，下订单时产生
 	private Date lateCheckInTime;
 	// 实际入住时间
 	private Date actualCheckInTime;
@@ -62,6 +58,8 @@ public class OrderInfoVO {
 	private double price;
 	// 订单状态
 	private OrderState state;
+	//撤销时间
+	private Date cancleTime;
 
 	// 空方法
 	public OrderInfoVO() {
@@ -69,17 +67,17 @@ public class OrderInfoVO {
 	}
 
 	// 查看所有订单信息
-	public OrderInfoVO(String customerID, String orderID, String customerName, String customerTelephone,
+	public OrderInfoVO(String orderID, String customerName, String liveinPersonName,String liveinPersonTelephone,
 			String hotelName, String hotelID, String hotelTelephone, String roomType, BedType bedType, int amount,
 			Date orderTime, int numberOfPeople, Children hasChild, boolean hasRemarked, Date expectedCheckInTime,
 			Date expectedCheckOutTime, Date lateCheckInTime, Date actualCheckInTime, Date actualCheckOutTime,
-			double price, OrderState state) {
-		this.setCustomerID(customerID);
+			double price, OrderState state,Date cancleTime) {
+		
 		this.setOrderID(orderID);
-		this.setCustomerName(customerName);
-		this.setCustomerTelephone(customerTelephone);
+		this.setCustomerName(customerName);	
+		this.setLiveinPersonName(liveinPersonName);
+		this.setLiveinPersonTelephone(liveinPersonTelephone);
 		this.setHotelName(hotelName);
-		this.setHotelID(hotelID);
 		this.setHotelTelephone(hotelTelephone);
 		this.setRoomType(roomType);
 		this.setBedType(bedType);
@@ -95,17 +93,17 @@ public class OrderInfoVO {
 		this.setActuarCheckOutTime(actualCheckOutTime);
 		this.setPrice(price);
 		this.setState(state);
+		this.setCancleTime(cancleTime);
 	}
 
 	// 顾客下订单时的订单信息
-	public OrderInfoVO(String orderID, String hotelID, String customerID, String customerName, String customerTelephone,
+	public OrderInfoVO(String orderID, String customerName, String liveinPersonName,String liveinPersonTelephone,
 			Date expectedCheckInTime, Date expectedCheckOutTime, String roomType, BedType bedType, int amount,
 			int numberOfPeople, Children hasChild, double price, OrderState state) {
 		this.setOrderID(orderID);
-		this.setCustomerID(customerID);
-		this.setHotelID(hotelID);
 		this.setCustomerName(customerName);
-		this.setCustomerTelephone(customerTelephone);
+		this.setLiveinPersonName(liveinPersonName);
+		this.setLiveinPersonTelephone(liveinPersonTelephone);
 		this.setExpectedCheckInTime(expectedCheckInTime);
 		this.setExpectedCheckOutTime(expectedCheckOutTime);
 		this.setRoomType(roomType);
@@ -120,14 +118,14 @@ public class OrderInfoVO {
 	// 顾客在撤销订单前及入住之前查看订单时显示的订单信息
 	// 酒店管理人员checkin时获取的订单信息
 	// 网站营销人员撤销异常订单时获取的订单信息
-	public OrderInfoVO(String orderID, String hotelID, String customerID, String customerName, String customerTelephone,
+	public OrderInfoVO(String orderID,  String customerName, String liveinPersonName,String liveinPersonTelephone,
 			Date expectedCheckInTime, Date expectedCheckOutTime, Date lateCheckInTime, String roomType, BedType bedType,
 			int amount, int numberOfPeople, Children hasChild, double price, OrderState state) {
 		this.setOrderID(orderID);
-		this.setCustomerID(customerID);
-		this.setHotelID(hotelID);
+		
 		this.setCustomerName(customerName);
-		this.setCustomerTelephone(customerTelephone);
+		this.setLiveinPersonName(liveinPersonName);
+		this.setLiveinPersonTelephone(liveinPersonTelephone);
 		this.setExpectedCheckInTime(expectedCheckInTime);
 		this.setExpectedCheckOutTime(expectedCheckOutTime);
 		this.setLateCheckInTime(lateCheckInTime);
@@ -141,14 +139,15 @@ public class OrderInfoVO {
 	}
 
 	// 酒店管理人员checkout时获取的订单信息
-	public OrderInfoVO(String orderID, String hotelID, String customerID, String customerName, String customerTelephone,
+	public OrderInfoVO(String orderID,  String liveinPersonName, String liveinPersonTelephone,
 			Date expectedCheckInTime, Date expectedCheckOutTime, Date lateCheckInTime, String roomType, BedType bedType,
 			int amount, int numberOfPeople, Children hasChild, OrderState state, Date actualCheckInTime) {
 		this.setOrderID(orderID);
-		this.setCustomerID(customerID);
-		this.setHotelID(hotelID);
+		
 		this.setCustomerName(customerName);
-		this.setCustomerTelephone(customerTelephone);
+		this.setLiveinPersonName(liveinPersonName);
+		this.setLiveinPersonTelephone(liveinPersonTelephone);
+		
 		this.setExpectedCheckInTime(expectedCheckInTime);
 		this.setExpectedCheckOutTime(expectedCheckOutTime);
 		this.setLateCheckInTime(lateCheckInTime);
@@ -159,14 +158,6 @@ public class OrderInfoVO {
 		this.setHasChild(hasChild);
 		this.setState(state);
 		this.setActualCheckInTime(actualCheckInTime);
-	}
-
-	public String getCustomerID() {
-		return customerID;
-	}
-
-	public void setCustomerID(String customerID) {
-		this.customerID = customerID;
 	}
 
 	public String getOrderID() {
@@ -185,13 +176,7 @@ public class OrderInfoVO {
 		this.customerName = customerName;
 	}
 
-	public String getCustomerTelephone() {
-		return customerTelephone;
-	}
 
-	public void setCustomerTelephone(String customerTelephone) {
-		this.customerTelephone = customerTelephone;
-	}
 
 	public String getHotelName() {
 		return hotelName;
@@ -201,13 +186,6 @@ public class OrderInfoVO {
 		this.hotelName = hotelName;
 	}
 
-	public String getHotelID() {
-		return hotelID;
-	}
-
-	public void setHotelID(String hotelID) {
-		this.hotelID = hotelID;
-	}
 
 	public String getHotelTelephone() {
 		return hotelTelephone;
@@ -327,6 +305,30 @@ public class OrderInfoVO {
 
 	public void setState(OrderState state) {
 		this.state = state;
+	}
+
+	public String getLiveinPersonName() {
+		return liveinPersonName;
+	}
+
+	public void setLiveinPersonName(String liveinPersonName) {
+		this.liveinPersonName = liveinPersonName;
+	}
+
+	public String getLiveinPersonTelephone() {
+		return liveinPersonTelephone;
+	}
+
+	public void setLiveinPersonTelephone(String liveinPersonTelephone) {
+		this.liveinPersonTelephone = liveinPersonTelephone;
+	}
+
+	public Date getCancleTime() {
+		return cancleTime;
+	}
+
+	public void setCancleTime(Date cancleTime) {
+		this.cancleTime = cancleTime;
 	}
 
 }

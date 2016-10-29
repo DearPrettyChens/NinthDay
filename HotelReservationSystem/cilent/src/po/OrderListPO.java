@@ -3,6 +3,8 @@ package po;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.swing.ImageIcon;
+
 import common.OrderState;
 /**
  * 订单列表信息po
@@ -24,18 +26,21 @@ public class OrderListPO implements Serializable{
 	private Date reserveTime;
 	//订单状态
 	private OrderState state;
+	//酒店图片
+	private ImageIcon hotelIcon;
 	//空方法
 	public OrderListPO(){
 		
 	}
 	//显示给顾客看的订单列表信息
-	public OrderListPO(String orderNumber,String hotelID,String hotelName,String customerName,Date reserveTime,OrderState state){
+	public OrderListPO(String orderNumber,String hotelID,String hotelName,String customerName,Date reserveTime,OrderState state,ImageIcon hotelIcon){
 		this.setOrderNumber(orderNumber);
 		this.setHotelID(hotelID);
 		this.setHotelName(hotelName);
 		this.setCustomerName(customerName);
 		this.setReserveTime(reserveTime);
 		this.setState(state);
+		this.setHotelIcon(hotelIcon);
 	}
 	//显示给酒店看的订单列表信息，需求规格上没有写
 	public OrderListPO(String orderNumber,String customerID,String customerName, Date reserveTime,OrderState state){
@@ -102,6 +107,12 @@ public class OrderListPO implements Serializable{
 
 	public void setCustomerName(String customerName) {
 		this.customerName = customerName;
+	}
+	public ImageIcon getHotelIcon() {
+		return hotelIcon;
+	}
+	public void setHotelIcon(ImageIcon hotelIcon) {
+		this.hotelIcon = hotelIcon;
 	}
 
 

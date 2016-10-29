@@ -2,7 +2,9 @@ package businesslogic.hotelbl;
 
 import java.util.ArrayList;
 
+import blservice.hotelblservice.HotelBLService;
 import common.ResultMessage;
+import common.Telephone;
 import vo.hotelvo.HotelBasicInfoVO;
 import vo.hotelvo.HotelDetailInfoVO;
 import vo.hotelvo.HotelOrderInfoVO;
@@ -12,7 +14,7 @@ import vo.hotelvo.HotelOrderVO;
  * @author csy
  * @version 1.0
  */
-public class HotelController {
+public class HotelController implements HotelBLService {
 	//持有hotel的引用
 	private Hotel hotel;
 	public HotelController() {
@@ -47,7 +49,7 @@ public class HotelController {
 	 *
 	 */
 	public ResultMessage checkTel(String telNum){
-		return null;
+		return new Telephone(telNum).checkValid();
 		
 	}
 	
@@ -58,7 +60,7 @@ public class HotelController {
 	 *
 	 */
 	public ResultMessage confirmModifyInfo(HotelBasicInfoVO hotelInfovo){
-		return null;
+		return hotel.confirmModifyInfo(hotelInfovo);
 		
 	}
 	
@@ -69,7 +71,7 @@ public class HotelController {
 	 *
 	 */
 	public ArrayList<HotelOrderVO> getHotelOrderList(String hotelID){
-		return null;
+		return hotel.getHotelOrderList(hotelID);
 		
 	}
 	
@@ -80,7 +82,7 @@ public class HotelController {
 	 *
 	 */
 	public HotelOrderInfoVO getHotelOrderInfo(String orderID){
-		return null;
+		return hotel.getHotelOrderInfo(orderID);
 		
 	}
 	
