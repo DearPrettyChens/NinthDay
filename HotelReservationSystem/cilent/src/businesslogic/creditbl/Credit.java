@@ -67,10 +67,6 @@ public class Credit {
 		return customerID;
 	}
 
-	public void setCustomerID(String customerID) {
-		this.customerID = customerID;
-	}
-
 	public ArrayList<String> getCreditInfoList() {
 		return creditInfoList;
 	}

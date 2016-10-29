@@ -13,25 +13,23 @@ public class SingleAvailableRoomInfo {
 	private BedType bedType;//床型
 	private double originalPrice;//原始价格
 	private double lowestPrice;//最低价格
+	private int roomNum;//房间数量
 	
 	public SingleAvailableRoomInfo(){
 		
 	}
 	
 	public SingleAvailableRoomInfo(SingleAvailableRoomInfoVO vo){
-		this.setHotelNumber(vo.getHotelNumber());
+		this.hotelNumber=vo.getHotelNumber();
 		this.setRoomType(vo.getRoomType());
 		this.setBedType(vo.getBedType());
 		this.setOriginalPrice(vo.getOriginalPrice());
 		this.setLowestPrice(vo.getLowestPrice());
+		this.setRoomNum(roomNum);
 	}
 
 	public String getHotelNumber() {
 		return hotelNumber;
-	}
-
-	public void setHotelNumber(String hotelNumber) {
-		this.hotelNumber = hotelNumber;
 	}
 
 	public String getRoomType() {
@@ -64,5 +62,13 @@ public class SingleAvailableRoomInfo {
 
 	public void setLowestPrice(double lowestPrice) {
 		this.lowestPrice = lowestPrice;
+	}
+
+	public int getRoomNum() {
+		return roomNum;
+	}
+
+	public void setRoomNum(int roomNum) {
+		this.roomNum = roomNum;
 	}
 }
