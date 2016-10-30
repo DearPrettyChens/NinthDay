@@ -54,7 +54,7 @@ public class Checkin{
 	public ResultMessage confirmCheckinInfo(CheckinInfoVO vo){
 		CheckinInfo checkinInfo=new CheckinInfo(vo);
 		//TODO
-		//调用order
+		//调用order的checktime方法
 		return null;
 	}
 	/**
@@ -64,11 +64,11 @@ public class Checkin{
 	 */
 	public ResultMessage confirmCheckoutInfo(CheckinInfoVO vo){
 		//TODO
-		//调用checkinInfo
+		//调用checkinInfo构造函数
 		//TODO
-		//调用availableroom
+		//调用availableroom的setAvailableRoomNumber方法
 		//TODO
-		//调用order
+		//调用order的checktime方法
 		return null;
 	}
 	/**
@@ -77,9 +77,9 @@ public class Checkin{
 	 * @param number
 	 * @return ResultMessage
 	 */
-	public ResultMessage checkAvailableRoomNumber(BedType bedType,String number){
+	public ResultMessage checkAvailableRoomNumber(String hotelID,BedType bedType,String number){
 		//TODO
-		//调用availableroom
+		//调用availableroom的checkAvailableRoomNumber方法
 		return null;
 	}
 	/**
@@ -87,18 +87,18 @@ public class Checkin{
 	 * @param vo
 	 * @return ResultMessage
 	 */
-	public ResultMessage confirmAvailableRoomNumber(AvailableRoomNumberVO vo){
+	public ResultMessage confirmAvailableRoomNumber(String hotelID,AvailableRoomNumberVO vo){
 		//TODO
-		//调用availableroom
+		//调用availableroom的confirmAvailableRoomInfo方法
 		return null;
 	}
 	/**
 	 * 系统返回该酒店的可用房间信息
 	 * @return ResultMessage
 	 */
-	public AvailableRoomInfoVO getAvailableRoomInfo(){
+	public AvailableRoomInfoVO getAvailableRoomInfo(String hotelID){
 		//TODO
-		//调用availableroom
+		//调用availableroomgetAvailableRoomInfo方法
 		return null;
 	}
 

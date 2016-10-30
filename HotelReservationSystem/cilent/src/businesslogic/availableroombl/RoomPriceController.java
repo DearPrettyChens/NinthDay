@@ -10,15 +10,17 @@ public class RoomPriceController implements RoomPriceService{
 	public RoomPriceController(){
 		availableRoom=new AvailableRoom();
 	}
-	@Override
-	public ResultMessage setBestPrice(double discount) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 	@Override
 	public double getRoomPrice(String hotelID, BedType bedType) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public ResultMessage setBestPrice(String hotelID, double discount) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

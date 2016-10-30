@@ -35,7 +35,7 @@ public class AvailableRoom {
 	 * @param availableRoomInfoVO
 	 * @return ResultMessage
 	 */
-	public ResultMessage confirmAvailableRoomInfo(AvailableRoomInfoVO availableRoomInfoVO) {
+	public ResultMessage confirmAvailableRoomInfo(String hotelID,AvailableRoomInfoVO availableRoomInfoVO) {
 		// TODO
 		return null;
 	}
@@ -44,7 +44,7 @@ public class AvailableRoom {
 	 * @param availableRoomNumberVO
 	 * @return ResultMessage
 	 */
-	public ResultMessage setAvailableRoomNumber(AvailableRoomNumberVO availableRoomNumberVO) {
+	public ResultMessage setAvailableRoomNumber(String hotelID,AvailableRoomNumberVO availableRoomNumberVO) {
 		// TODO
 		return null;
 	}
@@ -53,7 +53,7 @@ public class AvailableRoom {
 	 * @param discount
 	 * @return ResultMessage
 	 */
-	public ResultMessage setBestPrice(double discount) {
+	public ResultMessage setBestPrice(String hotelID,double discount) {
 		// TODO 
 		return null;
 	}
@@ -72,7 +72,7 @@ public class AvailableRoom {
 	 * @param availableRoomNumberVO
 	 * @return ResultMessage
 	 */
-	public ResultMessage checkAvailableRoomNumber(AvailableRoomNumberVO availableRoomNumberVO) {
+	public ResultMessage checkAvailableRoomNumber(String hotelID,AvailableRoomNumberVO availableRoomNumberVO) {
 		// TODO 
 		return null;
 	}

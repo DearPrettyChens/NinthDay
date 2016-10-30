@@ -53,21 +53,25 @@ public class CheckinController implements CheckinBLService{
 	}
 
 	@Override
-	public ResultMessage checkAvailableRoomNumber(BedType bedType, String number) {
+	public ResultMessage checkAvailableRoomNumber(String hotelID, BedType bedType, String number) {
 		// TODO Auto-generated method stub
-		return checkin.checkAvailableRoomNumber(bedType, number);
+		return null;
 	}
 
-	@Override
-	public ResultMessage confirmAvailableRoomNumber(AvailableRoomNumberVO availableRoomNumberVO) {
-		// TODO Auto-generated method stub
-		return checkin.confirmAvailableRoomNumber(availableRoomNumberVO);
-	}
+
 
 	@Override
-	public AvailableRoomInfoVO getAvailableRoomInfo() {
+	public ResultMessage confirmAvailableRoomNumber(String hotelID, AvailableRoomNumberVO availableRoomNumberVO) {
 		// TODO Auto-generated method stub
-		return checkin.getAvailableRoomInfo();
+		return null;
+	}
+
+
+
+	@Override
+	public AvailableRoomInfoVO getAvailableRoomInfo(String hotelID) {
+		// TODO Auto-generated method stub
+		return checkin.getAvailableRoomInfo(hotelID);
 	}
 
 }

@@ -16,23 +16,22 @@ public class AvailableRoomInfoController implements AvailableRoomInfoService{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 	@Override
-	public ResultMessage confirmAvailableRoomInfo(AvailableRoomInfoVO availableRoomInfoVO) {
+	public ResultMessage confirmAvailableRoomInfo(String hotelID, AvailableRoomInfoVO availableRoomInfoVO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public ResultMessage setAvailableRoomNumber(String hotelID, AvailableRoomNumberVO availableRoomNumberVO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public ResultMessage checkAvailableRoomNumber(String hotelID, AvailableRoomNumberVO availableRoomNumberVO) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public ResultMessage setAvailableRoomNumber(AvailableRoomNumberVO availableRoomNumberVO) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	public ResultMessage checkAvailableRoomNumber(AvailableRoomNumberVO availableRoomNumberVO) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

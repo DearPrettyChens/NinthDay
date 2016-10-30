@@ -25,7 +25,7 @@ public interface AvailableRoomInfoService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage confirmAvailableRoomInfo (AvailableRoomInfoVO availableRoomInfoVO);
+	public ResultMessage confirmAvailableRoomInfo (String hotelID,AvailableRoomInfoVO availableRoomInfoVO);
 	
 	/**
 	 * 更新可用客房的信息
@@ -34,7 +34,7 @@ public interface AvailableRoomInfoService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage setAvailableRoomNumber (AvailableRoomNumberVO availableRoomNumberVO);
+	public ResultMessage setAvailableRoomNumber (String hotelID,AvailableRoomNumberVO availableRoomNumberVO);
 	/**
 	 * 检测是否有足够的可用客房数量
 	 * @param availableRoomNumberVO AvailableRoomNumberVO型，传递当前可用客房数量信息
@@ -42,6 +42,6 @@ public interface AvailableRoomInfoService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage checkAvailableRoomNumber (AvailableRoomNumberVO availableRoomNumberVO);
+	public ResultMessage checkAvailableRoomNumber (String hotelID,AvailableRoomNumberVO availableRoomNumberVO);
 
 }

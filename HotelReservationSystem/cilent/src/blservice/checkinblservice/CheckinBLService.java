@@ -67,7 +67,7 @@ public interface CheckinBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage checkAvailableRoomNumber(BedType bedType,String number);
+	public ResultMessage checkAvailableRoomNumber(String hotelID,BedType bedType,String number);
 
 	
 	/**
@@ -77,7 +77,7 @@ public interface CheckinBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage confirmAvailableRoomNumber(AvailableRoomNumberVO availableRoomNumberVO);
+	public ResultMessage confirmAvailableRoomNumber(String hotelID,AvailableRoomNumberVO availableRoomNumberVO);
 	
 	/**
 	 * 获取该酒店的可用房间信息
@@ -86,6 +86,6 @@ public interface CheckinBLService {
 	 * @throws 未定
 	 *
 	 */
-	public AvailableRoomInfoVO getAvailableRoomInfo();
+	public AvailableRoomInfoVO getAvailableRoomInfo(String hotelID);
 	
 }

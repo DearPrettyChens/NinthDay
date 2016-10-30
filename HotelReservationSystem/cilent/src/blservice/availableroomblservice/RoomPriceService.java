@@ -15,7 +15,7 @@ public interface RoomPriceService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage setBestPrice (double discount);
+	public ResultMessage setBestPrice (String hotelID,double discount);
 	
 	/**
 	 * 订单计算价格的时候，来获取该房型价格
