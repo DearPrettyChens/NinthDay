@@ -3,11 +3,15 @@ package businesslogic.personnelbl;
 import java.util.ArrayList;
 
 import blservice.personnelblservice.PersonnelBLService;
+import common.Password;
 import common.ResultMessage;
+import common.Telephone;
 import vo.personnelvo.CustomerDetailVO;
 import vo.personnelvo.CustomerListVO;
 import vo.personnelvo.HotelWorkerDetailVO;
 import vo.personnelvo.HotelWorkerListVO;
+import vo.personnelvo.PersonDetailVO;
+import vo.personnelvo.PersonListVO;
 import vo.personnelvo.WebMarketManDetailVO;
 import vo.personnelvo.WebMarketManListVO;
 
@@ -20,104 +24,45 @@ import vo.personnelvo.WebMarketManListVO;
 public class PersonnelController implements PersonnelBLService {
 	private Personnel personnel;
 	public PersonnelController(){
-		
+	    this.personnel=new Personnel();
 	}
-    public PersonnelController(Personnel personnel){
-		this.personnel=personnel;
-	}
-
+    
 	@Override
 	public ResultMessage checkUserName(String userName) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	
 	@Override
-	public ResultMessage checkUserTel(String userTel) {
+	public ResultMessage addPerson(PersonDetailVO personDetailVO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public ArrayList<PersonListVO> getPersonList(String keyWord) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public PersonDetailVO getPersonDetail(String personID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public ResultMessage setPerson(PersonDetailVO personDetailVO) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResultMessage checkHotelTel(String hotelTel) {
+	public ResultMessage checkTel(Telephone userTel) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResultMessage checkPassword(String password) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ResultMessage confirmRegister(CustomerDetailVO customerDetailVO) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ResultMessage addHotelWorker(HotelWorkerDetailVO hotelWorkerDetailVO) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ResultMessage addWebMarketMan(WebMarketManDetailVO webMarketManDetailVO) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<HotelWorkerListVO> getHotelWorkerList() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<WebMarketManListVO> getWebMarketManList() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<CustomerListVO> getCustomerList() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public HotelWorkerDetailVO getHotelWorkerDetail(String hotelID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public WebMarketManDetailVO getWebWorkerManDetail(String webWorkerManID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public CustomerDetailVO getCustomerDetail(String customerID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ResultMessage modifyHotelworker(HotelWorkerDetailVO hotelWorkerDetailVO) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ResultMessage modifyWebMarketMan(WebMarketManDetailVO webMarketManDetailVO) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ResultMessage modifyCustomer(CustomerDetailVO customerDetailVO) {
+	public ResultMessage checkPassword(Password password) {
 		// TODO Auto-generated method stub
 		return null;
 	}

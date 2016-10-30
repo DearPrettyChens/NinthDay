@@ -17,12 +17,10 @@ public class SearchHotelController implements SearchHotelBLService{
      private SearchHotel searchHotel;//持有的credit的引用
      
      public SearchHotelController(){
+    	 searchHotel=new SearchHotel();
     	 
      }
-     public SearchHotelController(SearchHotel searchHotel){
-    	 this.searchHotel=searchHotel;
-     }
-     
+    
 	@Override
 	public ArrayList<HotelListVO> getHotelList() {
 		// TODO Auto-generated method stub
@@ -36,7 +34,7 @@ public class SearchHotelController implements SearchHotelBLService{
 	}
 
 	@Override
-	public ArrayList<HotelListVO> getBookedHotelList(HotelSortType type, OrderState orderState) {
+	public ArrayList<HotelListVO> getBookedHotelList(HotelSortType type, OrderState orderState,String ID) {
 		// TODO Auto-generated method stub
 		return null;
 	}

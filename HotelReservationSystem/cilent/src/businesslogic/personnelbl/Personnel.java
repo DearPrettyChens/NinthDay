@@ -2,7 +2,9 @@ package businesslogic.personnelbl;
 
 import java.util.ArrayList;
 
+import common.Password;
 import common.ResultMessage;
+import common.Telephone;
 import vo.personnelvo.CustomerDetailVO;
 import vo.personnelvo.CustomerListVO;
 import vo.personnelvo.HotelWorkerDetailVO;
@@ -36,7 +38,7 @@ public class Personnel {
 	 * @return ResultMessage
 	 * @throws 未定
 	 */
-	public ResultMessage checkTel(String userTel) {
+	public ResultMessage checkTel(Telephone userTel) {
 		
 		return null;
 	}
@@ -48,7 +50,7 @@ public class Personnel {
 	 * @return ResultMessage
 	 * @throws 未定
 	 */
-	public ResultMessage checkPassword(String password) {
+	public ResultMessage checkPassword(Password password) {
 		
 		return null;
 	}

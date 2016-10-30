@@ -9,62 +9,36 @@ import vo.personnelvo.PersonDetailVO;
 
 /**
  * 
- *各种人员的父类
+ *各种人员的接口
  * @author cy
  * @version 1.0
  * 
  */
-public class Person {
-	    //头像
-		ImageIcon userImage;
-		//用户名
-		String name;
-		//联系方式11位
-		Telephone telephone;
-		//密码
-		Password password;
-		//用户编号
-		String id;
-		public Person(){
-			
-		}
-        public Person(ImageIcon userImage,String name,Telephone telephone,Password password,String id){
-			this.userImage=userImage;
-			this.name=name;
-			this.telephone=telephone;
-			this.password=password;
-			this.id=id;
-			
-					
-		}
+public interface Person {
+	    
+		
+		
         /**
          * 增加用户信息
          * @param PersonDetailVO personDetailVO
          * @return ResultMessage
          * @throws 未定
          */
-        public ResultMessage addPerson(PersonDetailVO personDetailVO){
-        	return null;
-        	
-        }
+        public ResultMessage addPerson(PersonDetailVO personDetailVO);
         /**
          * 得到用户详细信息
          * @param null
          * @return PersonDetailVO
          * @throws 未定
          */
-        public PersonDetailVO getDetail (){
-        	return null;
-        }
+        public PersonDetailVO getDetail ();
         /**
          * 修改用户详细信息
          * @param PersonDetailVO personDetailVO
          * @return ResultMessage
          * @throws 未定
          */
-        public ResultMessage setPerson (PersonDetailVO personDetailVO){
-        	return null;
-        	
-        }
+        public ResultMessage setPerson (PersonDetailVO personDetailVO);
+        
         
 }

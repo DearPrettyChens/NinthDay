@@ -5,8 +5,10 @@ import java.util.Date;
 import javax.swing.ImageIcon;
 
 import common.Password;
+import common.ResultMessage;
 import common.Telephone;
 import common.UserType;
+import vo.personnelvo.PersonDetailVO;
 
 /**
  * 顾客详细信息
@@ -14,8 +16,19 @@ import common.UserType;
  * @version 1.0
  * 
  */
-public class Customer extends Person {
+public class Customer implements Person {
+	       
 	   
+	//头像
+	private ImageIcon userImage;
+	//用户名
+	private String name;
+	//联系方式11位
+	private Telephone telephone;
+	//密码
+	private Password password;
+	//用户编号
+	private String id;
 		//信用值
 		private int credit;
 		//生日
@@ -42,7 +55,21 @@ public class Customer extends Person {
 				this.VIPType=VIPType;
 				
 				
-				
 		    }
-
-}
+			@Override
+			public ResultMessage addPerson(PersonDetailVO personDetailVO) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			@Override
+			public PersonDetailVO getDetail() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			@Override
+			public ResultMessage setPerson(PersonDetailVO personDetailVO) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		    }
+		    

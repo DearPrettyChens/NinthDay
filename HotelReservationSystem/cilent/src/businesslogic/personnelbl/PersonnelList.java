@@ -21,7 +21,7 @@ public class PersonnelList {
     	
     }	
     
-    /**
+    /**初始化
      * @param keyWord
      * @return  ArrayList<PersonListVO>
      * @throws 未定
@@ -31,6 +31,7 @@ public class PersonnelList {
     }
     
     /**
+     * 得到用户具体信息
      * @param personID
      * @return Person
      * @throws 未定

@@ -37,6 +37,8 @@ public interface SearchHotelBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ArrayList<HotelListVO> getBookedHotelList(HotelSortType type,OrderState orderState);
+	public ArrayList<HotelListVO> getBookedHotelList(HotelSortType type,OrderState orderState,String ID);
+
+
 
 }
