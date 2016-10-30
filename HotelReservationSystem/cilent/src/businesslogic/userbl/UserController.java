@@ -1,7 +1,9 @@
 package businesslogic.userbl;
 
 import blservice.userblservice.UserBLService;
+import common.Password;
 import common.ResultMessage;
+import common.Telephone;
 import vo.uservo.BasicInfoVO;
 import vo.uservo.DetailInfoVO;
 import vo.uservo.PasswordVO;

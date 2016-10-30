@@ -21,13 +21,21 @@ public class WebSpecialAreaStrategy implements WebStrategyInterface {
     }
 
 	@Override
-	public WebStrVO getDiscount() {
+	public WebStrVO getWebStrategy() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResultMessage setDiscount(WebStrVO vo) {
+	public ResultMessage setWebStrategy(WebStrVO vo) {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public Map<TradingArea, Double> getStrategy() {
+		return strategy;
+	}
+
+
 
 }

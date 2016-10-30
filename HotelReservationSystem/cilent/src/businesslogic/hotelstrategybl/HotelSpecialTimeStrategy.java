@@ -11,8 +11,10 @@ import vo.hotelstrategyvo.HotelStrVO;
  * @version 1.0
  */
 public class HotelSpecialTimeStrategy implements HotelStrategyInterface{
-	//特殊时期酒店策略的映射
-    private Map<Date,Double> strategy;
+	//特殊时期酒店策略数组 两个元素记录开始时间和结束时间
+    private Date[] date;
+    //折扣值
+    private double discount;
     //构造方法
     public HotelSpecialTimeStrategy(){
     }
@@ -25,5 +27,9 @@ public class HotelSpecialTimeStrategy implements HotelStrategyInterface{
 	public ResultMessage confirmHotelStrategy(HotelStrVO hotelStrVO) {
 		return null;
 	}
+	public double getDiscount() {
+		return discount;
+	}
 
+	
 }

@@ -1,5 +1,6 @@
 package businesslogic.hotelstrategybl;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 
@@ -11,8 +12,10 @@ import vo.hotelstrategyvo.HotelStrVO;
  * @version 1.0
  */
 public class HotelEnterpriseStrategy implements HotelStrategyInterface {
-	//酒店合作企业折扣策略映射
-	private Map<Date, Double> strategy;
+	//酒店合作企业
+	private ArrayList <String> enterprise;
+	//折扣值
+	private double discount;
     //构造方法
 	public HotelEnterpriseStrategy() {
 	}
@@ -25,6 +28,14 @@ public class HotelEnterpriseStrategy implements HotelStrategyInterface {
 	@Override
 	public ResultMessage confirmHotelStrategy(HotelStrVO hotelStrVO) {
 		return null;
+	}
+
+	public double getDiscount() {
+		return discount;
+	}
+
+	public ArrayList<String> getEnterprise() {
+		return enterprise;
 	}
 
 }

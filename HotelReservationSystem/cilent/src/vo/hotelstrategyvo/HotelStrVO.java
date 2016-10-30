@@ -1,6 +1,7 @@
 package vo.hotelstrategyvo;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import common.HotelStrategyType;
 import common.Strategy;
@@ -15,30 +16,61 @@ public class HotelStrVO {
 	 *   
         
 	 */
-	private ArrayList<Strategy> strategy;
-	
+	//酒店ID
+	private String hotelID;
+	//数量策略的数量
+	private int amount;
+	//策略类型
+    private HotelStrategyType type;
+    //折扣值
+    private double discount;
+    //合作企业
+    private ArrayList <String> enterprise;
+    //优惠日期
+    private Date[] date;
 
 	public HotelStrVO(){
 		
 	}
-	
-	public  HotelStrVO(ArrayList<Strategy> strategy){
-		
-		this.strategy=strategy;
-		
-		
-	}
-	public ArrayList<Strategy> getStrategy() {
-		return strategy;
+
+	public HotelStrategyType getType() {
+		return type;
 	}
 
-	public void setStrategy(ArrayList<Strategy> strategy) {
-		this.strategy = strategy;
+	public void setType(HotelStrategyType type) {
+		this.type = type;
 	}
-	
-	
-	
-	
-	
+
+	public double getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(double discount) {
+		this.discount = discount;
+	}
+
+	public ArrayList<String> getEnterprise() {
+		return enterprise;
+	}
+
+	public void setEnterprise(ArrayList<String> enterprise) {
+		this.enterprise = enterprise;
+	}
+
+	public Date[] getDate() {
+		return date;
+	}
+
+	public void setDate(Date[] date) {
+		this.date = date;
+	}
+
+	public String getHotelID() {
+		return hotelID;
+	}
+
+	public void setHotelID(String hotelID) {
+		this.hotelID = hotelID;
+	}
 	
 }

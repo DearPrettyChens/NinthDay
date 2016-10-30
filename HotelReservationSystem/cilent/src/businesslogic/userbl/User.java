@@ -1,6 +1,8 @@
 package businesslogic.userbl;
 
+import common.Password;
 import common.ResultMessage;
+import common.Telephone;
 import vo.uservo.BasicInfoVO;
 import vo.uservo.DetailInfoVO;
 import vo.uservo.PasswordVO;
@@ -12,6 +14,8 @@ import vo.uservo.PasswordVO;
 public class User {
 	//不变的属性 ID
 	private String userID;
+	//密码
+	private String password;
 	/**
 	 * 登录方法
 	 * @param name

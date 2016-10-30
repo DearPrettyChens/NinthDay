@@ -13,13 +13,16 @@ public class BasicInfoVO {
 	private String userName;
 	//用户头像
 	private ImageIcon userImage;
+	//用户ID
+	private String userID;
 	
 	public BasicInfoVO(){
 	}
 	
-	public BasicInfoVO(String userName,ImageIcon userImage){
+	public BasicInfoVO(String userName,ImageIcon userImage,String userID){
 		this.setUserImage(userImage);
 		this.setUserName(userName);
+		this.setUserID(userID);
 	}
 	public String getUserName() {
 		return userName;
@@ -32,6 +35,14 @@ public class BasicInfoVO {
 	}
 	public void setUserImage(ImageIcon userImage) {
 		this.userImage = userImage;
+	}
+
+	public String getUserID() {
+		return userID;
+	}
+
+	public void setUserID(String userID) {
+		this.userID = userID;
 	}
 
 }

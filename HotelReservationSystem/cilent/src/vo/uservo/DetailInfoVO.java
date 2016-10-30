@@ -1,6 +1,5 @@
 package vo.uservo;
 
-
 import java.util.Date;
 
 import javax.swing.ImageIcon;
@@ -26,8 +25,19 @@ public class DetailInfoVO {
 	private String enterprise;
 	// 生日
 	private Date birth;
+	// 用户ID
+	private String userID;
 
-	public DetailInfoVO(){
+	public DetailInfoVO() {
+	}
+
+	public DetailInfoVO(String userName, String telephone, ImageIcon userImage, UserType userType, String enterprise,String id) {
+		this.setUserName(userName);
+		this.setTelephone(telephone);
+		this.setUserImage(userImage);
+		this.setUserType(userType);
+		this.setEnterprise(enterprise);
+		this.setUserID(id);
 	}
 	public DetailInfoVO(String userName, String telephone, ImageIcon userImage, UserType userType, String enterprise) {
 		this.setUserName(userName);
@@ -36,7 +46,16 @@ public class DetailInfoVO {
 		this.setUserType(userType);
 		this.setEnterprise(enterprise);
 	}
-	//普通会员的构造vo
+
+	// 普通会员的构造vo
+	public DetailInfoVO(String userName, String telephone, ImageIcon userImage, UserType userType, Date birth,String id) {
+		this.setUserName(userName);
+		this.setTelephone(telephone);
+		this.setUserImage(userImage);
+		this.setUserType(userType);
+		this.setBirth(birth);
+		this.setUserID(id);
+	}
 	public DetailInfoVO(String userName, String telephone, ImageIcon userImage, UserType userType, Date birth) {
 		this.setUserName(userName);
 		this.setTelephone(telephone);
@@ -91,6 +110,14 @@ public class DetailInfoVO {
 
 	public void setBirth(Date birth) {
 		this.birth = birth;
+	}
+
+	public String getUserID() {
+		return userID;
+	}
+
+	public void setUserID(String userID) {
+		this.userID = userID;
 	}
 
 }

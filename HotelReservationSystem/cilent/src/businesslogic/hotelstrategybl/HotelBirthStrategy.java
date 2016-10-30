@@ -28,4 +28,10 @@ public class HotelBirthStrategy implements HotelStrategyInterface {
 		return null;
 	}
 
+	public double getDiscount() {
+		return discount;
+	}
+	
+	
+
 }

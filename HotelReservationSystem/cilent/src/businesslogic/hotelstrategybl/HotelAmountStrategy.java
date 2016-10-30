@@ -11,8 +11,10 @@ import vo.hotelstrategyvo.HotelStrVO;
  * @version 1.0
  */
 public class HotelAmountStrategy implements HotelStrategyInterface{
-	//酒店预订数量策略的映射
-	private Map<Integer,Double> strategy;
+	//数量
+	private int amount;
+	//酒店预订数量策略折扣
+	private double discount;
     //构造方法
 	public HotelAmountStrategy(){
 	}
@@ -24,4 +26,13 @@ public class HotelAmountStrategy implements HotelStrategyInterface{
 	public ResultMessage confirmHotelStrategy(HotelStrVO hotelStrVO) {
 		return null;
 	}
+	
+	public double getDiscount() {
+		return discount;
+	}
+	
+	public int getAmount() {
+		return amount;
+	}
+	
 }

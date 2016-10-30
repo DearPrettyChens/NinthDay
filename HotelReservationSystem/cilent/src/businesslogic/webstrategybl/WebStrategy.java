@@ -38,7 +38,7 @@ public class WebStrategy {
      * @return WebStrVO
      */
 	public WebStrVO getWebStrategy(WebStrategyInterface webStrategyInterface) {
-		return webStrategyInterface.getDiscount();
+		return webStrategyInterface.getWebStrategy();
 	}
     /**
      * 修改网站等级规则 委托给webGradeRule
@@ -56,7 +56,7 @@ public class WebStrategy {
      * @return ResultMessage
      */
 	public ResultMessage confirmWebStrategy(WebStrategyInterface webStrategyInterface,WebStrVO vo) {
-		return webStrategyInterface.setDiscount(vo);
+		return webStrategyInterface.setWebStrategy(vo);
 	}
 
 }

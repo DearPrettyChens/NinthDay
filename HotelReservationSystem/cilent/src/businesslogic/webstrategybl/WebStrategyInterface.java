@@ -13,12 +13,12 @@ public interface WebStrategyInterface {
 	 * 获取策略折扣
 	 * @return WebStrVO
 	 */
-	public WebStrVO getDiscount() ;
+	public WebStrVO getWebStrategy() ;
 	/**
 	 * 设置策略折扣
 	 * @param vo
 	 * @return ResultMessage
 	 */
-	public ResultMessage setDiscount(WebStrVO vo);
+	public ResultMessage setWebStrategy(WebStrVO vo);
 	
 }
