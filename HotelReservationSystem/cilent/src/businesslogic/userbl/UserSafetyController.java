@@ -1,22 +1,15 @@
 package businesslogic.userbl;
 
-import blservice.userblservice.UserBLService;
+import blservice.userblservice.UserSafetyService;
 import common.Password;
 import common.ResultMessage;
 import common.Telephone;
 import vo.uservo.BasicInfoVO;
-import vo.uservo.DetailInfoVO;
 import vo.uservo.PasswordVO;
-/**
- * userController类
- * @author CYF
- * @version 1.0
- */
-public class UserController implements UserBLService{
-    //user对象
-	private User user ;
-	//构造方法
-	public UserController(){
+
+public class UserSafetyController implements UserSafetyService{  
+	private User user;
+	public UserSafetyController(){
 		user = new User();
 	}
 	@Override
@@ -25,18 +18,8 @@ public class UserController implements UserBLService{
 	}
 
 	@Override
-	public DetailInfoVO getDetailInfo(String name) {
-		return user.getDetailInfo(name,new Customer());
-	}
-
-	@Override
 	public ResultMessage checkTel(String tel) {
 		return user.checkTel(new Telephone(tel));
-	}
-
-	@Override
-	public ResultMessage confirmUserInfo(DetailInfoVO detailInfoVO) {
-		return user.confirmUserInfo(detailInfoVO,new Customer());
 	}
 
 	@Override
@@ -55,18 +38,14 @@ public class UserController implements UserBLService{
 	}
 
 	@Override
-	public BasicInfoVO getBasicInfo(String name) {
-		return user.getBasicInfo(name);
-	}
-
-	@Override
 	public String getUserID(String name) {
 		return user.getUserID(name);
 	}
 
 	@Override
-	public int getGrade(String name) {
-		return user.getGrade(name,new Customer());
+	public BasicInfoVO getBasicInfo(String name) {
+		// TODO Auto-generated method stub
+		return user.getBasicInfo(name);
 	}
 
 }

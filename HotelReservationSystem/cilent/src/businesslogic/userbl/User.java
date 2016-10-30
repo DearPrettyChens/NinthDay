@@ -26,30 +26,12 @@ public class User {
 		return null;
 	}
     /**
-     * 获取详细信息 委托给customer
-     * @param name
-     * @param customer
-     * @return DetailInfoVO
-     */
-  	public DetailInfoVO getDetailInfo(String name, Customer customer) {
-		return customer.getDetailInfo(name);
-	}
-    /**
      * 检查联系方式格式 委托给telephone
      * @param tel
      * @return ResultMessage
      */
   	public ResultMessage checkTel(Telephone tel) {
 		return tel.checkValid();
-	}
-    /**
-     * 修改用户信息 委托给customer
-     * @param detailInfoVO
-     * @param customer
-     * @return ResultMessage
-     */
-	public ResultMessage confirmUserInfo(DetailInfoVO detailInfoVO,Customer customer) {
-		return customer.modifyDetailInfo(detailInfoVO);
 	}
     /**
      * 检查旧密码是否输入正确
@@ -92,15 +74,6 @@ public class User {
      */
 	public String getUserID(String name) {
 		return null;
-	}
-    /**
-     * 获得用户等级 委托给customer
-     * @param name
-     * @param customer
-     * @return int
-     */
-	public int getGrade(String name,Customer customer) {
-		return customer.getGrade(name);
 	}
 
 }
