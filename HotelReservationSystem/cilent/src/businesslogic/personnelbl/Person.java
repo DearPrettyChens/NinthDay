@@ -23,6 +23,9 @@ public interface Person {
          * @param PersonDetailVO personDetailVO
          * @return ResultMessage
          * @throws 未定
+         * 需接口：PersonnelDataService.addCustomer
+         * PersonnelDataService.addHotelWorker
+         * PersonnelDataService.addWebMarketMan
          */
         public ResultMessage addPerson(PersonDetailVO personDetailVO);
         /**
@@ -30,6 +33,9 @@ public interface Person {
          * @param null
          * @return PersonDetailVO
          * @throws 未定
+         * 需接口：PersonnelDataService.getHotelworkerDetail
+         * PersonnelDataService.getWebMarketManDetail
+         * PersonnelDataService.getCustomerDetail
          */
         public PersonDetailVO getDetail ();
         /**
@@ -37,6 +43,9 @@ public interface Person {
          * @param PersonDetailVO personDetailVO
          * @return ResultMessage
          * @throws 未定
+         * 需接口：PersonnelDataService. setHotelWorker
+         * PersonnelDataService. setWebMarketMan
+         * PersonnelDataService. setCustomer
          */
         public ResultMessage setPerson (PersonDetailVO personDetailVO);
         

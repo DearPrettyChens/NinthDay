@@ -25,6 +25,9 @@ public class PersonnelList {
      * @param keyWord
      * @return  ArrayList<PersonListVO>
      * @throws 未定
+     * 需接口：PersonnelDataService.getHotelWorkerList
+     * PersonnelDataService.getWebMarketManList
+     * PersonnelDataService.getCustomerList
      */
     public ArrayList<PersonListVO> init(String keyWord){
     	return null;
@@ -35,6 +38,7 @@ public class PersonnelList {
      * @param personID
      * @return Person
      * @throws 未定
+     * 
      */
     public Person getPerson (String personID){
     	return null;

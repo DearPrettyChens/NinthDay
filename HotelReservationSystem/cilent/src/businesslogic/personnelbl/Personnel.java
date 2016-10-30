@@ -60,6 +60,7 @@ public class Personnel {
 	 * @param personDetailVO
 	 * @return ResultMessage
 	 * @throws 未定
+	 * 需接口：Person.addPerson
 	 */
 	public ResultMessage addPerson(PersonDetailVO personDetailVO){
 		return null;
@@ -70,6 +71,7 @@ public class Personnel {
 	 * @param keyWord
 	 * @return  ArrayList<PersonListVO>
 	 * @throws 未定
+	 * 需接口：PersonList.init
 	 */
 	public ArrayList<PersonListVO> getPersonList(String keyWord){
 		return null;
@@ -80,6 +82,7 @@ public class Personnel {
 	 * @param personID
 	 * @return PersonDetailVO
 	 * @throws 未定
+	 * 需接口：PersonList.getPerson
 	 */
 	public PersonDetailVO getPersonDetail(String personID){
 		return null;
@@ -90,6 +93,7 @@ public class Personnel {
 	 * @param PersonDetailVO personDetailVO
 	 * @return ResultMessage
 	 * @throws 未定
+	 * 需接口：Person.setPerson
 	 */
 	public ResultMessage setPerson (PersonDetailVO personDetailVO){
 		return null;
