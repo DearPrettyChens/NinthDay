@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.Map;
 
 import common.ResultMessage;
+import data.hotelstrategydata.HotelStrategyDataServiceMySqlImpl_Stub;
+import dataservice.hotelstrategydataservice.HotelStrategyDataService;
 import vo.hotelstrategyvo.HotelStrVO;
 /**
  * 酒店特殊时期优惠策略类
@@ -15,8 +17,10 @@ public class HotelSpecialTimeStrategy implements HotelStrategyInterface{
     private Date[] date;
     //折扣值
     private double discount;
+    private HotelStrategyDataService hotelStrategyDataService;
     //构造方法
     public HotelSpecialTimeStrategy(){
+    	hotelStrategyDataService = new HotelStrategyDataServiceMySqlImpl_Stub();
     }
 	@Override
 	public HotelStrVO getHotelStrategy(String hotelID) {

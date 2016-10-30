@@ -6,6 +6,8 @@ import java.util.Map;
 import common.ResultMessage;
 import common.TradingArea;
 import common.WebStrategyType;
+import data.webstrategydata.WebStrategyDataServiceMySqlImpl_Stub;
+import dataservice.webstrategydataservice.WebStrategyDataService;
 import vo.webstrategyvo.WebStrVO;
 /**
  * 酒店特定商圈策略类
@@ -15,9 +17,9 @@ import vo.webstrategyvo.WebStrVO;
 public class WebSpecialAreaStrategy implements WebStrategyInterface {
     //酒店特定商圈策略映射
 	private Map<TradingArea,Double> strategy; 
-	
+	private WebStrategyDataService webStrategyDataService;
     public WebSpecialAreaStrategy(){
-    	
+    	webStrategyDataService = new WebStrategyDataServiceMySqlImpl_Stub();
     }
 
 	@Override

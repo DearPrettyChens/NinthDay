@@ -5,6 +5,8 @@ import java.util.Map;
 
 import common.ResultMessage;
 import common.WebStrategyType;
+import data.webstrategydata.WebStrategyDataServiceMySqlImpl_Stub;
+import dataservice.webstrategydataservice.WebStrategyDataService;
 import vo.webstrategyvo.WebStrVO;
 /**
  * 网站特定时期策略
@@ -16,8 +18,10 @@ public class WebSpecialTimeStrategy implements WebStrategyInterface{
     private Date[] date;
     //折扣值
     private double discount;
-	
-	
+    private WebStrategyDataService webStrategyDataService;
+	public WebSpecialTimeStrategy(){
+		webStrategyDataService = new WebStrategyDataServiceMySqlImpl_Stub();
+	}
 	public Date[] getDate() {
 		return date;
 	}

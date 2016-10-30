@@ -1,6 +1,8 @@
 package businesslogic.userbl;
 
 import common.ResultMessage;
+import data.userdata.UserDataServiceMySqlImpl_Stub;
+import dataservice.userdataservice.UserDataService;
 import vo.uservo.DetailInfoVO;
 /**
  * Customer类
@@ -10,8 +12,10 @@ import vo.uservo.DetailInfoVO;
 public class Customer {
 	//等级
 	private int grade;
+	private UserDataService userDataService;
 	//构造方法
 	public Customer(){
+		userDataService=new UserDataServiceMySqlImpl_Stub();
 	}
 	/**
 	 * 获得用户等级方法

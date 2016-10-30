@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.Map;
 
 import common.ResultMessage;
+import data.hotelstrategydata.HotelStrategyDataServiceMySqlImpl_Stub;
+import dataservice.hotelstrategydataservice.HotelStrategyDataService;
 import vo.hotelstrategyvo.HotelStrVO;
 /**
  * 酒店合作企业策略类
@@ -16,8 +18,10 @@ public class HotelEnterpriseStrategy implements HotelStrategyInterface {
 	private ArrayList <String> enterprise;
 	//折扣值
 	private double discount;
+	private HotelStrategyDataService hotelStrategyDataService;
     //构造方法
 	public HotelEnterpriseStrategy() {
+		hotelStrategyDataService = new HotelStrategyDataServiceMySqlImpl_Stub();
 	}
 
 	@Override

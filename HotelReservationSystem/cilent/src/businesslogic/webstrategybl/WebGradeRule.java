@@ -1,6 +1,8 @@
 package businesslogic.webstrategybl;
 
 import common.ResultMessage;
+import data.webstrategydata.WebStrategyDataServiceMySqlImpl_Stub;
+import dataservice.webstrategydataservice.WebStrategyDataService;
 import vo.webstrategyvo.GradeRuleVO;
 /**
  * 网站等级规则类
@@ -10,7 +12,9 @@ import vo.webstrategyvo.GradeRuleVO;
 public class WebGradeRule {
 	//每升一级的信用值
 	private int credit;
+	private WebStrategyDataService webStrategyDataService;
 	public WebGradeRule(){
+		webStrategyDataService = new WebStrategyDataServiceMySqlImpl_Stub();
 	}
     /**
      * 获取信用值

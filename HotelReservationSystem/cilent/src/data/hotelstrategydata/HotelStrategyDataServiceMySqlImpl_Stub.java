@@ -28,7 +28,7 @@ public class HotelStrategyDataServiceMySqlImpl_Stub implements HotelStrategyData
 	@Override
 	public HotelStrPO getHotelStrategy(String hotelID, HotelStrategyType type) {
 		// TODO Auto-generated method stub
-		return new HotelStrPO(new ArrayList<Strategy>());
+		return new HotelStrPO();
 	}
 
 	@Override

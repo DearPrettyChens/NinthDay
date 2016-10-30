@@ -3,6 +3,8 @@ package businesslogic.userbl;
 import common.Password;
 import common.ResultMessage;
 import common.Telephone;
+import data.userdata.UserDataServiceMySqlImpl_Stub;
+import dataservice.userdataservice.UserDataService;
 import vo.uservo.BasicInfoVO;
 import vo.uservo.DetailInfoVO;
 import vo.uservo.PasswordVO;
@@ -16,6 +18,10 @@ public class User {
 	private String userID;
 	//密码
 	private String password;
+	private UserDataService userDataService;
+	public User(){
+		userDataService = new UserDataServiceMySqlImpl_Stub();
+	}
 	/**
 	 * 登录方法
 	 * @param name

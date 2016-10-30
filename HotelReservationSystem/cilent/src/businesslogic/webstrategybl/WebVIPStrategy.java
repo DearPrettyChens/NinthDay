@@ -4,6 +4,8 @@ import java.util.Map;
 
 import common.ResultMessage;
 import common.WebStrategyType;
+import data.webstrategydata.WebStrategyDataServiceMySqlImpl_Stub;
+import dataservice.webstrategydataservice.WebStrategyDataService;
 import vo.webstrategyvo.WebStrVO;
 /**
  * 网站vip折扣策略
@@ -13,8 +15,9 @@ import vo.webstrategyvo.WebStrVO;
 public class WebVIPStrategy implements WebStrategyInterface{
 	//网站vip折扣策略映射
 	private Map<Integer,Double> strategy;
+	private WebStrategyDataService webStrategyDataService;
 	public WebVIPStrategy(){
-		
+		webStrategyDataService = new WebStrategyDataServiceMySqlImpl_Stub();
 	}
 	@Override
 	public WebStrVO getWebStrategy() {

@@ -4,6 +4,8 @@ import java.util.Map;
 
 import common.HotelStrategyType;
 import common.ResultMessage;
+import data.hotelstrategydata.HotelStrategyDataServiceMySqlImpl_Stub;
+import dataservice.hotelstrategydataservice.HotelStrategyDataService;
 import vo.hotelstrategyvo.HotelStrVO;
 /**
  * 酒店预订数量策略类
@@ -15,8 +17,10 @@ public class HotelAmountStrategy implements HotelStrategyInterface{
 	private int amount;
 	//酒店预订数量策略折扣
 	private double discount;
+	private HotelStrategyDataService hotelStrategyDataService;
     //构造方法
 	public HotelAmountStrategy(){
+		hotelStrategyDataService = new HotelStrategyDataServiceMySqlImpl_Stub();
 	}
 	@Override
 	public HotelStrVO getHotelStrategy(String hotelID) {

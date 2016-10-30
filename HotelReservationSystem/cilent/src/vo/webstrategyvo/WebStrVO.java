@@ -5,6 +5,7 @@ import java.util.Map;
 
 import common.Strategy;
 import common.TradingArea;
+import common.WebStrategyType;
 
 /**
  * 网站所有的营销策略
@@ -15,31 +16,27 @@ import common.TradingArea;
 public class WebStrVO {
 
 	//商圈折扣映射
-	private Map<TradingArea, Double> tradingAreaStrategy;
+	//private Map<TradingArea, Double> tradingAreaStrategy;
 	//vip折扣映射
-	private Map<Integer,Double> specialTimeStrategy;
+	private Map<Integer,Double> specialTimeOrTradingAreaStrategy;
 	//日期
 	private Date[] date;
 	//时期折扣值
 	private double discount;
+	private WebStrategyType type;
 
 	public WebStrVO() {
 	}
 
-	public Map<TradingArea, Double> getTradingAreaStrategy() {
-		return tradingAreaStrategy;
+	public WebStrVO(Map<Integer,Double> specialTimeOrTradingAreaStrategy,double discount,WebStrategyType type) {
+		this.setSpecialTimeOrTradingAreaStrategy(specialTimeOrTradingAreaStrategy);
+		this.setDiscount(discount);
+		this.setType(type);
 	}
-
-	public void setTradingAreaStrategy(Map<TradingArea, Double> tradingAreaStrategy) {
-		this.tradingAreaStrategy = tradingAreaStrategy;
-	}
-
-	public Map<Integer, Double> getSpecialTimeStrategy() {
-		return specialTimeStrategy;
-	}
-
-	public void setSpecialTimeStrategy(Map<Integer, Double> specialTimeStrategy) {
-		this.specialTimeStrategy = specialTimeStrategy;
+	public WebStrVO(Date[] date,double discount) {
+        this.setDate(date);
+		this.setDiscount(discount);
+		this.setType(WebStrategyType.SPECIALTIME);
 	}
 
 	public Date[] getDate() {
@@ -56,6 +53,20 @@ public class WebStrVO {
 
 	public void setDiscount(double discount) {
 		this.discount = discount;
+	}
+	public WebStrategyType getType() {
+		return type;
+	}
+	public void setType(WebStrategyType type) {
+		this.type = type;
+	}
+
+	public Map<Integer, Double> getSpecialTimeOrTradingAreaStrategy() {
+		return specialTimeOrTradingAreaStrategy;
+	}
+
+	public void setSpecialTimeOrTradingAreaStrategy(Map<Integer, Double> specialTimeOrTradingAreaStrategy) {
+		this.specialTimeOrTradingAreaStrategy = specialTimeOrTradingAreaStrategy;
 	}
 
 	

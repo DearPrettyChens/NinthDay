@@ -5,6 +5,8 @@ import java.util.Map;
 
 import common.HotelStrategyType;
 import common.ResultMessage;
+import data.hotelstrategydata.HotelStrategyDataServiceMySqlImpl_Stub;
+import dataservice.hotelstrategydataservice.HotelStrategyDataService;
 import vo.hotelstrategyvo.HotelStrVO;
 /**
  * 酒店生日策略类
@@ -14,8 +16,10 @@ import vo.hotelstrategyvo.HotelStrVO;
 public class HotelBirthStrategy implements HotelStrategyInterface {
 	//酒店生日策略折扣值
 	private double discount;
+	private HotelStrategyDataService hotelStrategyDataService;
     //构造方法
 	public HotelBirthStrategy() {
+		hotelStrategyDataService = new HotelStrategyDataServiceMySqlImpl_Stub();
 	}
 
 	@Override

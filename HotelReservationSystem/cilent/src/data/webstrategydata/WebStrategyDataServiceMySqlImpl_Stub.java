@@ -1,6 +1,7 @@
 package data.webstrategydata;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import common.ResultMessage;
 import common.Strategy;
@@ -33,7 +34,7 @@ public class WebStrategyDataServiceMySqlImpl_Stub implements WebStrategyDataServ
 	@Override
 	public WebStrPO getWebStrategy(WebStrategyType type) {
 		// TODO Auto-generated method stub
-		return new WebStrPO(new ArrayList<Strategy>());
+		return new WebStrPO();
 	}
 
 	@Override
