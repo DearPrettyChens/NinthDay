@@ -2,8 +2,8 @@ package businesslogic.orderbl;
 
 import java.util.ArrayList;
 import java.util.Date;
-import businesslogic.userbl.Telephone;
 import common.ResultMessage;
+import common.Telephone;
 import vo.availableroomvo.AvailableRoomNumberVO;
 import vo.hotelvo.HotelDetailInfoVO;
 import vo.ordervo.OrderInfoVO;
