@@ -72,7 +72,9 @@ public class Hotel implements HotelInfoAvailService,HotelInfoOrderService{
 	 */
 	public HotelDetailInfoVO getHotelDetailInfo(String hotelID,String customerID){
 		return null;
-		
+		//调用Availableroom.getAvailableRoomInfo获得酒店可用客房信息
+	    //调用HotelStrategy.getHotelStrategy获得酒店优惠策略
+	    //调用User.getUserID获得当前用户信息来调用订单？有疑惑？
 	}
 	
 	
@@ -95,6 +97,7 @@ public class Hotel implements HotelInfoAvailService,HotelInfoOrderService{
 	 */
 	public ArrayList<HotelOrderVO> getHotelOrderList(String hotelID){
 		return null;	
+		//调用Order.getOrderList获得该酒店的订单列表信息
 	}
 	
 	/**
@@ -105,7 +108,7 @@ public class Hotel implements HotelInfoAvailService,HotelInfoOrderService{
 	 */
 	public HotelOrderInfoVO getHotelOrderInfo(String orderID){
 		return null;
-		
+		//调用Order.getOrderInfo获得该酒店某一订单的详细信息
 	}
 
 	@Override
@@ -116,7 +119,7 @@ public class Hotel implements HotelInfoAvailService,HotelInfoOrderService{
 
 	@Override
 	public AvailableRoomInfoVO getAvailableRoomInfo(String hotelID) {
-		// TODO Auto-generated method stub
+		//调用Availableroom.getAvailableRoomInfo获得酒店可用客房信息
 		return null;
 	}
 

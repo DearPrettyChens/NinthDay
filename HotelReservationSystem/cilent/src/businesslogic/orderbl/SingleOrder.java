@@ -4,10 +4,13 @@ import java.util.Date;
 
 import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
 
+
 import common.OrderState;
 import common.ResultMessage;
 import data.orderdata.OrderDataServiceMySqlImpl_Stub;
 import dataservice.orderdataservice.OrderDataService;
+import vo.availableroomvo.AvailableRoomNumberVO;
+import vo.hotelvo.HotelDetailInfoVO;
 import vo.ordervo.OrderInfoVO;
 import vo.ordervo.RemarkVO;
 import vo.ordervo.StrategyVO;
@@ -42,9 +45,9 @@ public class SingleOrder {
 	 * @return ResultMessage，如果设置成功返回SUCCESS,否则返回FAIL
 	 * @throws 未定
 	 */
-	public StrategyVO addOrder(OrderInfoVO vo){
+	public ResultMessage addOrder(OrderInfoVO orderInfoVO){
 		return null;
-		
+		//调用Availableroom.setAvailableRoomNumber更新可用房间数
 	}
 	
 	/**
@@ -59,6 +62,19 @@ public class SingleOrder {
 	}
 	
 	/**
+	 * 增加顾客订单总价全部或二分之一的信用值
+	 * @param creditNum int 型，界面传递过来的信用值
+	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
+	 * @throws 未定
+	 *
+	 */
+	public ResultMessage setReturnCredit(int creditNum){
+		return null;
+		//调用Credit.cutCredit扣除顾客信用值
+		//调用Credit.addCredit异常订单撤销时，恢复顾客的信用值
+	}
+	
+	/**
 	 * 保存订单实际入住时间
 	 * @param time Date型，orderID string型，界面传递过来的实际入住时间和订单编号
 	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
@@ -68,7 +84,7 @@ public class SingleOrder {
 
 	public ResultMessage setCheckinTime(Date time,String orderID){
 		return null;
-		
+		//调用Credit.addCredit为顾客增加信用值
 	}
 	
 	/**
@@ -80,7 +96,7 @@ public class SingleOrder {
 	 */
 	public ResultMessage setCheckoutTime(Date time,String orderID){
 		return null;
-		
+		//调用Availableroom.setAvailableRoomNumber更新可用房间数
 	}
 	
 	/**
@@ -92,6 +108,6 @@ public class SingleOrder {
 	 */
 	public ResultMessage remarkOrder(RemarkVO vo){
 		return null;
-		
+		//调用HotelInfoOrderService里面的addRemarkInfo方法
 	}
 }

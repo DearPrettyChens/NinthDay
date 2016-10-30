@@ -2,7 +2,7 @@ package businesslogic.orderbl;
 
 import java.util.ArrayList;
 import java.util.Date;
-
+import businesslogic.userbl.Telephone;
 import common.ResultMessage;
 import vo.availableroomvo.AvailableRoomNumberVO;
 import vo.hotelvo.HotelDetailInfoVO;
@@ -28,7 +28,7 @@ public class Order {
 	 */
 	public ResultMessage checkUserCredit(String CustomerID){
 		return null;
-		
+		//调用User.getDetailInfo获得顾客信息
 	}
 	
 	/**
@@ -44,64 +44,14 @@ public class Order {
 	}
 	
 	/**
-	 * 新增订单信息
-	 * @param 
-	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
-	 * @throws 未定
-	 *
-	 */
-	public ResultMessage confirmAddOrder(){
-		return null;
-		
+     * 检查联系方式格式 委托给telephone
+     * @param tel
+     * @return ResultMessage
+     */
+  	public ResultMessage checkTel(Telephone tel) {
+		return tel.checkValid();
 	}
 	
-	/**
-	 * 获取订单详细信息
-	 * @param orderID String型，传递订单号
-	 * @return OrderInfoVO ，将订单详细信息返回给界面或hotel模块
-	 * @throws 未定
-	 *
-	 */
-	public OrderInfoVO getOrderInfo(String orderID){
-		return null;
-		
-	}
-	
-	/**
-	 * 获取特定类型的订单列表
-	 * @param typeInfoVO TypeInfoVO型,传递订单类型信息
-	 * @return  ArrayList<OrderVO> ，将特定订单列表返回给界面
-	 * @throws 未定
-	 *
-	 */
-	public ArrayList<OrderVO> getOrderList(TypeInfoVO vo){
-		return null;
-		
-	}
-	
-	/**
-	 * 撤销订单，如果是异常订单撤销，返还相应的信用值
-	 * @param orderID String型，界面传递过来的订单号
-	 * @return ResultMessage，撤销成功返回SUCCESS,撤销失败返回FAIL，格式错误返回具体什么格式错误
-	 * @throws 未定
-	 *
-	 */
-	public ResultMessage cancelOrderConfirm (String orderID){
-		return null;
-		
-	}
-	
-	/**
-	 * 评价酒店
-	 * @param remarkVO RemarkVO型，界面传递过来的评价信息
-	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
-	 * @throws 未定
-	 *
-	 */
-	public ResultMessage remarkOrder(RemarkVO vo){
-		return null;
-		
-	}
 	
 	/**
 	 * 产生优惠信息
@@ -111,42 +61,20 @@ public class Order {
 	 *
 	 */
 	public StrategyVO next(OrderInfoVO orderinfovo){
+		//调用WebStrategy.getWebBestStrategy获得最大折扣的网站优惠策略和HotelStrategy.getBestHotelStrategy获得最大折扣的酒店优惠策略
 		return null;
 		
 	}
 	
 	/**
-	 * 保存订单实际入住时间
-	 * @param time Date型，界面传递过来的实际入住时间
+	 * 新增订单信息
+	 * @param 
 	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage setCheckinTime(Date time){
-		return null;
+	public ResultMessage confirmAddOrder(OrderInfoVO orderInfoVO){
 		
-	}
-	
-	/**
-	 * 保存订单实际退房时间
-	 * @param time Date型，界面传递过来的实际退房时间
-	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
-	 * @throws 未定
-	 *
-	 */
-	public ResultMessage setCheckoutTime(Date time){
-		return null;
-		
-	}
-	
-	/**
-	 * 增加顾客订单总价全部或二分之一的信用值
-	 * @param creditNum int 型，界面传递过来的信用值
-	 * @return ResultMessage，保存成功返回SUCCESS,失败返回FAIL，格式错误返回具体什么格式错误
-	 * @throws 未定
-	 *
-	 */
-	public ResultMessage setReturnCredit(int creditNum){
 		return null;
 		
 	}
@@ -160,7 +88,7 @@ public class Order {
 	 */
 	public HotelDetailInfoVO getHotelDetailInfo(String hotelID){
 		return null;
-		
+		//调用HotelInfoOrderService里面的方法getHotelDetailInfo
 	}
 	
 	/**
@@ -172,7 +100,7 @@ public class Order {
 	 */
 	public ResultMessage checkAvailableRoomNumber (AvailableRoomNumberVO vo){
 		return null;
-		
+		//调用Availableroom.checkAvailableRoomNumber检查可用房间数
 	}
 	
 	

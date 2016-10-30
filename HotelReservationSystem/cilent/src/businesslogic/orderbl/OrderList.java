@@ -30,15 +30,5 @@ public class OrderList {
 		return null;
 		
 	}
-	/**
-	 * 获取订单详细信息
-	 * @param orderID String型，传递订单号
-	 * @return OrderInfoVO ，将订单详细信息返回给界面或hotel模块
-	 * @throws 未定
-	 *
-	 */
-	public OrderInfoVO getOrderInfo(String orderId){
-		return null;
-		
-	}
+	
 }

@@ -53,7 +53,7 @@ public interface OrderBLService {
 	 * @throws 未定
 	 *
 	 */
-	public ResultMessage confirmAddOrder();
+	public ResultMessage confirmAddOrder(OrderInfoVO orderInfoVO);
 	
 	/**
 	 * 产生优惠信息
