@@ -1,19 +1,16 @@
 package businesslogic.availableroombl;
 
-import blservice.availableroomblservice.AvailableRoomBLService;
-import common.BedType;
+import blservice.availableroomblservice.AvailableRoomInfoService;
 import common.ResultMessage;
 import vo.availableroomvo.AvailableRoomInfoVO;
 import vo.availableroomvo.AvailableRoomNumberVO;
-/**
- * AvailableRoom模块的控制类
- * @author CLL
- * @version 1.0
- */
-public class AvailableRoomController implements AvailableRoomBLService{
+
+public class AvailableRoomInfoController implements AvailableRoomInfoService{
 	//持有AvailableRoom引用
-	AvailableRoom availableRoom=new AvailableRoom();
-	
+	private AvailableRoom availableRoom;
+	public AvailableRoomInfoController(){
+		availableRoom=new AvailableRoom();
+	}
 	@Override
 	public AvailableRoomInfoVO getAvailableRoomInfo(String hotelID) {
 		// TODO Auto-generated method stub
@@ -30,18 +27,6 @@ public class AvailableRoomController implements AvailableRoomBLService{
 	public ResultMessage setAvailableRoomNumber(AvailableRoomNumberVO availableRoomNumberVO) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public ResultMessage setBestPrice(double discount) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public double getRoomPrice(String hotelID, BedType bedType) {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 
 	@Override

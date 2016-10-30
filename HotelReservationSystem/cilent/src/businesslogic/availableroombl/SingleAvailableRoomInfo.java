@@ -1,6 +1,8 @@
 package businesslogic.availableroombl;
 
 import common.BedType;
+import common.ResultMessage;
+import dataservice.availableroomdataservice.AvailableRoomDataService;
 import vo.availableroomvo.SingleAvailableRoomInfoVO;
 /**
  * 某一种客房的类
@@ -14,6 +16,7 @@ public class SingleAvailableRoomInfo {
 	private double originalPrice;//原始价格
 	private double lowestPrice;//最低价格
 	private int roomNum;//房间数量
+	private AvailableRoomDataService availableRoomDataService;//数据层的引用
 	
 	public SingleAvailableRoomInfo(){
 		
@@ -27,48 +30,53 @@ public class SingleAvailableRoomInfo {
 		this.setLowestPrice(vo.getLowestPrice());
 		this.setRoomNum(roomNum);
 	}
-
+	//以下get,set都是和数据层的交互
 	public String getHotelNumber() {
-		return hotelNumber;
+		return null;
 	}
 
 	public String getRoomType() {
-		return roomType;
+		return null;
 	}
 
-	public void setRoomType(String roomType) {
+	public ResultMessage setRoomType(String roomType) {
 		this.roomType = roomType;
+		return null;
 	}
 
 	public BedType getBedType() {
-		return bedType;
+		return null;
 	}
 
-	public void setBedType(BedType bedType) {
+	public ResultMessage setBedType(BedType bedType) {
 		this.bedType = bedType;
+		return null;
 	}
 
 	public double getOriginalPrice() {
-		return originalPrice;
+		return 0;
 	}
 
-	public void setOriginalPrice(double originalPrice) {
+	public ResultMessage setOriginalPrice(double originalPrice) {
 		this.originalPrice = originalPrice;
+		return null;
 	}
 
 	public double getLowestPrice() {
-		return lowestPrice;
+		return 0;
 	}
 
-	public void setLowestPrice(double lowestPrice) {
+	public ResultMessage setLowestPrice(double lowestPrice) {
 		this.lowestPrice = lowestPrice;
+		return null;
 	}
 
 	public int getRoomNum() {
-		return roomNum;
+		return 0;
 	}
 
-	public void setRoomNum(int roomNum) {
+	public ResultMessage setRoomNum(int roomNum) {
 		this.roomNum = roomNum;
+		return null;
 	}
 }

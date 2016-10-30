@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import common.BedType;
 import common.ResultMessage;
+import dataservice.availableroomdataservice.AvailableRoomDataService;
 import vo.checkinvo.AvailableRoomInfoVO;
 import vo.checkinvo.AvailableRoomNumberVO;
 import vo.checkinvo.CheckinInfoVO;
@@ -14,20 +15,10 @@ import vo.checkinvo.OrderInfoVO;
  * @version1.0
  */
 public class Checkin{
-	//住房信息列表
-	ArrayList<CheckinInfo> checkinInfoList;
-	//酒店编号
-	String hotelID;
-	
+	//数据层的引用
+	private AvailableRoomDataService availableRoomDataService;
 	public Checkin(){
 		
-	}
-	
-	public Checkin(String hotelID){
-		this.hotelID=hotelID;
-		//TODO 
-		//这边应该有一个方法从酒店数据层拿到酒店所有的住房记录
-		checkinInfoList=new ArrayList<CheckinInfo>();
 	}
 	/**
 	 * 根据订单号获取顾客订单信息
@@ -62,7 +53,6 @@ public class Checkin{
 	 */
 	public ResultMessage confirmCheckinInfo(CheckinInfoVO vo){
 		CheckinInfo checkinInfo=new CheckinInfo(vo);
-		checkinInfoList.add(checkinInfo);
 		//TODO
 		//调用order
 		return null;

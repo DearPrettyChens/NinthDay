@@ -13,18 +13,14 @@ import vo.checkinvo.OrderInfoVO;
  * @version1.0
  */
 public class CheckinController implements CheckinBLService{
-	//所属酒店编号
-	String hotelID;
 	//持有checkin的引用
-	Checkin checkin=new Checkin(hotelID);
+	private Checkin checkin;
 	
 	public CheckinController(){
-		
+		checkin=new Checkin();
 	}
 	
-	public CheckinController(String hotelID){
-		this.hotelID=hotelID;
-	}
+
 	
 	@Override
 	public OrderInfoVO getOrderInfo(String orderID) {

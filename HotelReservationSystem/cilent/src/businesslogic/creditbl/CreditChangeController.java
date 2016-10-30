@@ -1,23 +1,20 @@
 package businesslogic.creditbl;
 
-import blservice.creditblservice.CreditBLService;
+import blservice.creditblservice.CreditChangeService;
 import common.ResultMessage;
-import vo.creditvo.CreditInfoVO;
 import vo.creditvo.CreditVO;
+
 /**
  * credit模块的控制类
  * @author CLL
  * @version 1.0
  */
-public class CreditController implements CreditBLService {
+public class CreditChangeController implements CreditChangeService{
 	//持有credit的引用
-	Credit credit=new Credit();
-	@Override
-	public CreditInfoVO getCreditInfo(String customerID) {
-		// TODO Auto-generated method stub
-		return null;
+	private Credit credit;
+	public CreditChangeController(){
+		credit=new Credit();
 	}
-
 	@Override
 	public ResultMessage addCredit(CreditVO creditVO) {
 		// TODO Auto-generated method stub

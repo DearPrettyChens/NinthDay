@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import common.BedType;
 import common.ResultMessage;
+import dataservice.availableroomdataservice.AvailableRoomDataService;
 import vo.availableroomvo.AvailableRoomInfoVO;
 import vo.availableroomvo.AvailableRoomNumberVO;
 /**
@@ -13,17 +14,13 @@ import vo.availableroomvo.AvailableRoomNumberVO;
  */
 public class AvailableRoom {
 	//可用住房信息列表
-	ArrayList<SingleAvailableRoomInfo> singleAvailableRoomInfoList;
-	//酒店编号
-	String hotelID;
-	
+	private ArrayList<SingleAvailableRoomInfo> singleAvailableRoomInfoList;
+	//数据层的引用
+	private AvailableRoomDataService availableRoomDataService;
 	public AvailableRoom(){
 		
 	}
 	
-	public AvailableRoom(String hotelID){
-		this.hotelID=hotelID;
-	}
 	/**
 	 * 获取酒店的可用房间信息
 	 * @param hotelID

@@ -3,6 +3,7 @@ package businesslogic.creditbl;
 import java.util.ArrayList;
 
 import common.ResultMessage;
+import dataservice.availableroomdataservice.AvailableRoomDataService;
 import vo.creditvo.CreditInfoVO;
 import vo.creditvo.CreditVO;
 /**
@@ -11,6 +12,8 @@ import vo.creditvo.CreditVO;
  * @version 1.0
  */
 public class Credit {
+	//数据层的引用
+	private AvailableRoomDataService availableRoomDataService;
 	//单条信用记录
 	private String creditInfo;
 	//信用值
@@ -62,32 +65,35 @@ public class Credit {
 		// TODO 
 		return null;
 	}
-
+	//以下get,set都是和数据层的交互
 	public String getCustomerID() {
-		return customerID;
+		return null;
 	}
 
 	public ArrayList<String> getCreditInfoList() {
-		return creditInfoList;
+		return null;
 	}
 
-	public void setCreditInfoList(ArrayList<String> creditInfoList) {
-		this.creditInfoList = creditInfoList;
+	public ResultMessage setCreditInfoList(ArrayList<String> creditInfoList) {
+		return null;
+		
 	}
 
 	public int getCredit() {
-		return credit;
+		return 0;
 	}
 
-	public void setCredit(int credit) {
-		this.credit = credit;
+	public ResultMessage setCredit(int credit) {
+		return null;
+		
 	}
 
 	public String getCreditInfo() {
-		return creditInfo;
+		return null;
 	}
 
-	public void setCreditInfo(String creditInfo) {
-		this.creditInfo = creditInfo;
+	public ResultMessage setCreditInfo(String creditInfo) {
+		return null;
+		
 	}
 }

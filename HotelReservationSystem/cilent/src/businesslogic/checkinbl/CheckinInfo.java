@@ -4,6 +4,7 @@ import java.util.Date;
 
 import common.BedType;
 import common.ResultMessage;
+import dataservice.availableroomdataservice.AvailableRoomDataService;
 import vo.checkinvo.CheckinInfoVO;
 
 /**
@@ -12,6 +13,7 @@ import vo.checkinvo.CheckinInfoVO;
  * @version1.0
  */
 public class CheckinInfo {
+	private String hotelID;//酒店编号
 	private String name;//用户真实姓名
 	private String ID;//身份证号（数字
 	private String tel;//联系方式（11位手机号）
@@ -21,6 +23,8 @@ public class CheckinInfo {
 	private Date checkoutTime;//实际退房时间（-年-月-日-时-分
 	private String hotelNumber;//酒店编号
 	private String orderNumber;//订单号
+	//数据层的引用
+	private AvailableRoomDataService availableRoomDataService;
 	
 	public CheckinInfo(){
 		
@@ -31,6 +35,7 @@ public class CheckinInfo {
 	 * @param vo
 	 */
 	public CheckinInfo(CheckinInfoVO vo){
+		this.hotelID=vo.getHotelnumber();
 		this.name=vo.getCostumername();
 		this.ID=vo.getID();
 		this.tel=vo.getTel();
@@ -42,19 +47,6 @@ public class CheckinInfo {
 		this.orderNumber=vo.getOrdernumber();
 	}
 	
-	public CheckinInfo(String name,String ID,String tel,String roomtype,BedType bedtype,String roomnumber
-			,Date checkintime,Date checkouttime,String hotelnumber,String ordernumber){
-		this.name=name;
-		this.ID=ID;
-		this.tel=tel;
-		this.bedType=bedtype;
-		this.roomNumber=roomnumber;
-		this.checkinTime=checkintime;
-		this.checkoutTime=checkouttime;
-		this.hotelNumber=hotelnumber;
-		this.orderNumber=ordernumber;
-		
-	}
 	
 	/**
 	 * 获取查找到的顾客住房信息
@@ -73,59 +65,75 @@ public class CheckinInfo {
 	public ResultMessage confirmCheckoutInfo(CheckinInfoVO vo){
 		return null;
 	}
-	
+	//以下get,set都是和数据层的交互
 	public String getName() {
-		return name;
+		return null;
 	}
 	public void setName(String name) {
-		this.name = name;
+		
 	}
 	public String getID() {
-		return ID;
+		return null;
 	}
-	public void setID(String iD) {
-		ID = iD;
+	public ResultMessage setID(String iD) {
+		return null;
+		
 	}
 	public String getTel() {
-		return tel;
+		return null;
 	}
-	public void setTel(String tel) {
-		this.tel = tel;
+	public ResultMessage setTel(String tel) {
+		return null;
+		
 	}
 	public BedType getRoomtype() {
-		return bedType;
+		return null;
 	}
-	public void setRoomtype(BedType roomtype) {
-		this.bedType = roomtype;
+	public ResultMessage setRoomtype(BedType roomtype) {
+		return null;
+		
 	}
 	public String getRoomnumber() {
-		return roomNumber;
+		return null;
 	}
-	public void setRoomnumber(String roomnumber) {
-		this.roomNumber = roomnumber;
+	public ResultMessage setRoomnumber(String roomnumber) {
+		return null;
+		
 	}
 	public Date getCheckintime() {
-		return checkinTime;
+		return null;
 	}
-	public void setCheckintime(Date checkintime) {
-		this.checkinTime = checkintime;
+	public ResultMessage setCheckintime(Date checkintime) {
+		return null;
+		
 	}
 	public Date getCheckouttime() {
-		return checkoutTime;
+		return null;
 	}
-	public void setCheckouttime(Date checkouttime) {
-		this.checkoutTime = checkouttime;
+	public ResultMessage setCheckouttime(Date checkouttime) {
+		return null;
+		
 	}
 	public String getHotelnumber() {
-		return hotelNumber;
+		return null;
 	}
-	public void setHotelnumber(String hotelnumber) {
-		this.hotelNumber = hotelnumber;
+	public ResultMessage setHotelnumber(String hotelnumber) {
+		return null;
+		
 	}
 	public String getOrdernumber() {
-		return orderNumber;
+		return null;
 	}
-	public void setOrdernumber(String ordernumber) {
-		this.orderNumber = ordernumber;
+	public ResultMessage setOrdernumber(String ordernumber) {
+		return null;
+		
+	}
+
+	public String getHotelID() {
+		return hotelID;
+	}
+
+	public void setHotelID(String hotelID) {
+		this.hotelID = hotelID;
 	}
 }
