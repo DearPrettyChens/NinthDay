@@ -34,6 +34,9 @@ public class HotelSpecialTimeStrategy implements HotelStrategyInterface{
 	public double getDiscount() {
 		return discount;
 	}
+	public Date[] getDate() {
+		return date;
+	}
 
 	
 }

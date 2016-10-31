@@ -14,14 +14,7 @@ public interface UserSafetyService {
 	 */
 	public ResultMessage login(String name ,String password);
 
-	/**
-	 * 检查电话格式
-	 * @param tel String型，传递联系方式
-	 * @return ResultMessage，格式正确返回SUCCESS,格式错误返回USERTELFORMATERROR
-	 * @throws 未定
-	 *
-	 */
-	public ResultMessage checkTel(String tel);
+	
 	/**
 	 * 检查密码是否正确
 	 * 

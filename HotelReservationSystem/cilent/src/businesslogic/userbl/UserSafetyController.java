@@ -18,11 +18,6 @@ public class UserSafetyController implements UserSafetyService{
 	}
 
 	@Override
-	public ResultMessage checkTel(String tel) {
-		return user.checkTel(new Telephone(tel));
-	}
-
-	@Override
 	public ResultMessage checkOldPassword(String name, String password) {
 		return user.checkOldPassword(name, password);
 	}

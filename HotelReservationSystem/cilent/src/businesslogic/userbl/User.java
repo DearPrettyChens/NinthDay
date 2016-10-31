@@ -31,20 +31,7 @@ public class User {
 	public ResultMessage login(String name, String password) {
 		return null;
 	}
-    /**
-     * 检查联系方式格式 委托给telephone
-     * @param tel
-     * @return ResultMessage
-     */
-  	public ResultMessage checkTel(Telephone tel) {
-		return tel.checkValid();
-	}
-    /**
-     * 检查旧密码是否输入正确
-     * @param name
-     * @param password
-     * @return ResultMessage
-     */
+   
 	public ResultMessage checkOldPassword(String name, String password) {
 		return null;
 	}

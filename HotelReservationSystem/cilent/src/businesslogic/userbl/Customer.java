@@ -1,6 +1,7 @@
 package businesslogic.userbl;
 
 import common.ResultMessage;
+import common.Telephone;
 import data.userdata.UserDataServiceMySqlImpl_Stub;
 import dataservice.userdataservice.UserDataService;
 import vo.uservo.DetailInfoVO;
@@ -12,10 +13,8 @@ import vo.uservo.DetailInfoVO;
 public class Customer {
 	//等级
 	private int grade;
-	private UserDataService userDataService;
 	//构造方法
 	public Customer(){
-		userDataService=new UserDataServiceMySqlImpl_Stub();
 	}
 	/**
 	 * 获得用户等级方法
@@ -33,6 +32,20 @@ public class Customer {
 	public DetailInfoVO getDetailInfo(String name){
 		return null;
 	}
+	 /**
+     * 检查联系方式格式 委托给telephone
+     * @param tel
+     * @return ResultMessage
+     */
+  	public ResultMessage checkTel(Telephone tel) {
+		return tel.checkValid();
+	}
+    /**
+     * 检查旧密码是否输入正确
+     * @param name
+     * @param password
+     * @return ResultMessage
+     */
 	/**
 	 * 修改用户详细信息
 	 * @param detailInfoVO

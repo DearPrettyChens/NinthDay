@@ -2,6 +2,7 @@ package businesslogic.userbl;
 
 import blservice.userblservice.UserMaintainPersonalInformationService;
 import common.ResultMessage;
+import common.Telephone;
 import vo.uservo.BasicInfoVO;
 import vo.uservo.DetailInfoVO;
 import vo.uservo.PasswordVO;
@@ -14,7 +15,10 @@ public class UserMaintainPersonnalInformationController implements UserMaintainP
 	public UserMaintainPersonnalInformationController() {
 		customer = new Customer();
 	}
-
+	@Override
+	public ResultMessage checkTel(String tel) {
+		return customer.checkTel(new Telephone(tel));
+	}
 	@Override
 	public DetailInfoVO getDetailInfo(String name) {
 		return customer.getDetailInfo(name);
