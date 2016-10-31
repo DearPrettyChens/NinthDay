@@ -66,74 +66,74 @@ public class CheckinInfo {
 		return null;
 	}
 	//以下get,set都是和数据层的交互
-	public String getName() {
+	private String getName() {
 		return null;
 	}
-	public void setName(String name) {
+	private void setName(String name) {
 		
 	}
-	public String getID() {
+	private String getID() {
 		return null;
 	}
-	public ResultMessage setID(String iD) {
-		return null;
-		
-	}
-	public String getTel() {
-		return null;
-	}
-	public ResultMessage setTel(String tel) {
+	private ResultMessage setID(String iD) {
 		return null;
 		
 	}
-	public BedType getRoomtype() {
+	private String getTel() {
 		return null;
 	}
-	public ResultMessage setRoomtype(BedType roomtype) {
-		return null;
-		
-	}
-	public String getRoomnumber() {
-		return null;
-	}
-	public ResultMessage setRoomnumber(String roomnumber) {
+	private ResultMessage setTel(String tel) {
 		return null;
 		
 	}
-	public Date getCheckintime() {
+	private BedType getRoomtype() {
 		return null;
 	}
-	public ResultMessage setCheckintime(Date checkintime) {
-		return null;
-		
-	}
-	public Date getCheckouttime() {
-		return null;
-	}
-	public ResultMessage setCheckouttime(Date checkouttime) {
+	private ResultMessage setRoomtype(BedType roomtype) {
 		return null;
 		
 	}
-	public String getHotelnumber() {
+	private String getRoomnumber() {
 		return null;
 	}
-	public ResultMessage setHotelnumber(String hotelnumber) {
+	private ResultMessage setRoomnumber(String roomnumber) {
 		return null;
 		
 	}
-	public String getOrdernumber() {
+	private Date getCheckintime() {
 		return null;
 	}
-	public ResultMessage setOrdernumber(String ordernumber) {
+	private ResultMessage setCheckintime(Date checkintime) {
+		return null;
+		
+	}
+	private Date getCheckouttime() {
+		return null;
+	}
+	private ResultMessage setCheckouttime(Date checkouttime) {
+		return null;
+		
+	}
+	private String getHotelnumber() {
+		return null;
+	}
+	private ResultMessage setHotelnumber(String hotelnumber) {
+		return null;
+		
+	}
+	private String getOrdernumber() {
+		return null;
+	}
+	private ResultMessage setOrdernumber(String ordernumber) {
 		return null;
 		
 	}
 
-	public String getHotelID() {
+	private String getHotelID() {
 		return hotelID;
 	}
 
-	public void setHotelID(String hotelID) {
+	private void setHotelID(String hotelID) {
 		this.hotelID = hotelID;
 	}
 }

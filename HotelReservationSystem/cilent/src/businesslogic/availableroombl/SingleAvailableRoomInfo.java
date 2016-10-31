@@ -3,6 +3,7 @@ package businesslogic.availableroombl;
 import common.BedType;
 import common.ResultMessage;
 import dataservice.availableroomdataservice.AvailableRoomDataService;
+import vo.availableroomvo.AvailableRoomInfoVO;
 import vo.availableroomvo.SingleAvailableRoomInfoVO;
 /**
  * 某一种客房的类
@@ -24,58 +25,74 @@ public class SingleAvailableRoomInfo {
 	
 	public SingleAvailableRoomInfo(SingleAvailableRoomInfoVO vo){
 		this.hotelNumber=vo.getHotelNumber();
-		this.setRoomType(vo.getRoomType());
-		this.setBedType(vo.getBedType());
-		this.setOriginalPrice(vo.getOriginalPrice());
-		this.setLowestPrice(vo.getLowestPrice());
-		this.setRoomNum(roomNum);
+		this.roomType=vo.getRoomType();
+		this.bedType=vo.getBedType();
+		this.originalPrice=vo.getOriginalPrice();
+		this.lowestPrice=vo.getLowestPrice();
+		this.roomNum=vo.getRoomNum();
+	}
+	/**
+	 * 获得某种类型房间的可用信息
+	 * @param hotelID
+	 * @return AvailableRoomInfoVO
+	 */
+	public AvailableRoomInfoVO getAvailableRoomInfo(String hotelID){
+		return null;
+	}
+	/**
+	 * 修改数据库中的可用房间信息
+	 * @param vo
+	 * @return ResultMessage
+	 */
+	public ResultMessage confirmAvailableRoomInfo (AvailableRoomInfoVO vo){
+		return null;
 	}
 	//以下get,set都是和数据层的交互
-	public String getHotelNumber() {
+	private String getHotelNumber() {
 		return null;
 	}
 
-	public String getRoomType() {
+	private String getRoomType() {
 		return null;
 	}
 
-	public ResultMessage setRoomType(String roomType) {
+	private ResultMessage setRoomType(String roomType) {
 		this.roomType = roomType;
 		return null;
 	}
 
-	public BedType getBedType() {
+	private BedType getBedType() {
 		return null;
 	}
 
-	public ResultMessage setBedType(BedType bedType) {
+	private ResultMessage setBedType(BedType bedType) {
 		this.bedType = bedType;
 		return null;
 	}
 
-	public double getOriginalPrice() {
+	private double getOriginalPrice() {
 		return 0;
 	}
 
-	public ResultMessage setOriginalPrice(double originalPrice) {
+	private ResultMessage setOriginalPrice(double originalPrice) {
 		this.originalPrice = originalPrice;
 		return null;
 	}
 
-	public double getLowestPrice() {
+	private double getLowestPrice() {
 		return 0;
 	}
 
-	public ResultMessage setLowestPrice(double lowestPrice) {
+	private ResultMessage setLowestPrice(double lowestPrice) {
 		this.lowestPrice = lowestPrice;
 		return null;
 	}
 
-	public int getRoomNum() {
+	private int getRoomNum() {
 		return 0;
 	}
 
-	public ResultMessage setRoomNum(int roomNum) {
+	private ResultMessage setRoomNum(int roomNum) {
 		this.roomNum = roomNum;
 		return null;
 	}

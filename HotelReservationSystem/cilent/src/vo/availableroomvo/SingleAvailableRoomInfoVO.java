@@ -8,6 +8,7 @@ public class SingleAvailableRoomInfoVO {
 	private BedType bedType;//床型
 	private double originalPrice;//原始价格
 	private double lowestPrice;//最低价格
+	private int roomNum;//房间数量
 	
 	public SingleAvailableRoomInfoVO(){
 		
@@ -51,5 +52,13 @@ public class SingleAvailableRoomInfoVO {
 	}
 	public void setLowestPrice(double lowestPrice) {
 		this.lowestPrice = lowestPrice;
+	}
+
+	public int getRoomNum() {
+		return roomNum;
+	}
+
+	public void setRoomNum(int roomNum) {
+		this.roomNum = roomNum;
 	}
 }

@@ -66,33 +66,33 @@ public class Credit {
 		return null;
 	}
 	//以下get,set都是和数据层的交互
-	public String getCustomerID() {
+	private String getCustomerID() {
 		return null;
 	}
 
-	public ArrayList<String> getCreditInfoList() {
+	private ArrayList<String> getCreditInfoList() {
 		return null;
 	}
 
-	public ResultMessage setCreditInfoList(ArrayList<String> creditInfoList) {
+	private ResultMessage setCreditInfoList(ArrayList<String> creditInfoList) {
 		return null;
 		
 	}
 
-	public int getCredit() {
+	private int getCredit() {
 		return 0;
 	}
 
-	public ResultMessage setCredit(int credit) {
+	private ResultMessage setCredit(int credit) {
 		return null;
 		
 	}
 
-	public String getCreditInfo() {
+	private String getCreditInfo() {
 		return null;
 	}
 
-	public ResultMessage setCreditInfo(String creditInfo) {
+	private ResultMessage setCreditInfo(String creditInfo) {
 		return null;
 		
 	}
