@@ -10,10 +10,14 @@ import vo.webstrategyvo.WebBestStrVO;
 public class StrategyVO {
       private WebBestStrVO webBestStrVO;//最佳网站策略
       private HotelBestStrVO hotelBestStrVO;//最佳酒店策略
+      private double price;
       
-      public StrategyVO(WebBestStrVO webBestStrVO,HotelBestStrVO hotelBestStrVO) {
-		this.setWebBestStrVO(webBestStrVO);
-		this.setHotelBestStrVO(hotelBestStrVO);
+      
+
+	public StrategyVO(WebBestStrVO webBestStrVO, HotelBestStrVO hotelBestStrVO, double price) {
+		this.webBestStrVO = webBestStrVO;
+		this.hotelBestStrVO = hotelBestStrVO;
+		this.price = price;
 	}
 
 	public WebBestStrVO getWebBestStrVO() {
@@ -30,6 +34,14 @@ public class StrategyVO {
 
 	public void setHotelBestStrVO(HotelBestStrVO hotelBestStrVO) {
 		this.hotelBestStrVO = hotelBestStrVO;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
       
       

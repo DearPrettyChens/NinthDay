@@ -48,6 +48,7 @@ public class SingleOrder {
 	public ResultMessage addOrder(OrderInfoVO orderInfoVO){
 		return null;
 		//调用Availableroom.setAvailableRoomNumber更新可用房间数
+	    //调用SingleOrder.addOrderState	更新订单状态
 	}
 	
 	/**

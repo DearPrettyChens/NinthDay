@@ -28,7 +28,7 @@ public class Order {
 	 */
 	public ResultMessage checkUserCredit(String CustomerID){
 		return null;
-		//调用User.getDetailInfo获得顾客信息
+		//调User.getDetailInfo获得顾客信息
 	}
 	
 	/**
@@ -62,6 +62,7 @@ public class Order {
 	 */
 	public StrategyVO next(OrderInfoVO orderinfovo){
 		//调用WebStrategy.getWebBestStrategy获得最大折扣的网站优惠策略和HotelStrategy.getBestHotelStrategy获得最大折扣的酒店优惠策略
+		//调用Availableroom.getRoomPrice	获得酒店房间价格
 		return null;
 		
 	}
@@ -74,7 +75,7 @@ public class Order {
 	 *
 	 */
 	public ResultMessage confirmAddOrder(OrderInfoVO orderInfoVO){
-		
+		//调用SingleOrder.addOrder向数据库中新增订单
 		return null;
 		
 	}
